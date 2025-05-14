@@ -1,0 +1,48 @@
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.headerContainer{
+    width: 100%;
+    position: relative;
+}
+
+#header{
+    width: 100%;
+}
+
+#title{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 46.25%;
+}
+
+.outlineContainer{
+    width: 80%;
+    max-width: 642px;
+    margin: 6rem auto 9rem;
+}
+
+#threeCat{
+    display: block;
+    width: 54%;
+    margin: 0 auto 4rem;
+}
+
+.outlineText{
+    font-family: Futura, serif;
+    font-size: 1rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+}
