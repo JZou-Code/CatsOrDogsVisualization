@@ -1,18 +1,19 @@
-.container{
+.container {
     max-width: 1440px;
     margin: 0 auto;
+    border: 2px solid rgba(251, 210, 0, .8);
 }
 
-.headerContainer{
-    width: 100%;
+.headerContainer {
+    max-width: 100%;
     position: relative;
 }
 
-#header{
+#header {
     width: 100%;
 }
 
-#title{
+#title {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -20,21 +21,27 @@
     right: 0;
     margin: auto;
     width: 46.25%;
+    object-fit: contain;
 }
 
-.outlineContainer{
-    width: 80%;
+.bodyContainer {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.outlineContainer {
+    width: 100%;
     max-width: 642px;
     margin: 6rem auto 9rem;
 }
 
-#threeCat{
+#threeCat {
     display: block;
     width: 54%;
     margin: 0 auto 4rem;
 }
 
-.outlineText{
+.text {
     font-family: Futura, serif;
     font-size: 1rem;
     font-weight: 500;
@@ -46,3 +53,90 @@
     color: rgba(0, 0, 0, 0.8);
     margin-bottom: 1rem;
 }
+
+.title {
+    width: 40%;
+}
+
+.regionContainer {
+    width: 100%;
+}
+
+.regionVis {
+    display: flex;
+}
+
+.regionText {
+    width: 40%;
+    margin-top: 5.6%;
+}
+
+#regionEChart {
+    width: 55%;
+    margin-left: 5%;
+}
+
+.regionBtnContainer {
+    display: flex;
+    justify-content: center;
+    height: 5.6%;
+    align-items: center;
+}
+
+.regionBtnContainer button {
+    margin: 0 0.5rem;
+    border: solid 1px rgba(0, 0, 0, .3);
+    font-family: Arial, serif;
+    width: 13%;
+    height: 50%;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #dccae2;
+    font-size: 0.8rem;
+}
+
+button:hover {
+    box-shadow: 0 0 5px gray;
+    transform: scale(1.05);
+}
+
+button:active{
+    box-shadow: none;
+    transform: scale(1);
+}
+
+.active {
+    background-color: lightgreen;
+}
+
+#regionMap {
+    width: 100%;
+    height: 500px;
+    transform: scale(1.2);
+    transform-origin: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+#regionLegend{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 10px;
+    height: 10px;
+}
+
+.legendItem{
+    font-size: 0.6rem;
+}
+
+
+

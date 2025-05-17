@@ -5,22 +5,99 @@
     <title>cat or dog</title>
     <link href="css/clear_default.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+
 </head>
 <body>
 <div class="container">
     <div class="headerContainer">
         <img id="header" src="assets/header.jpg" alt="">
-        <img id="title" src="assets/title.svg" alt="">
+        <img id="title" src="assets/title.png" alt="">
     </div>
+    <div class="bodyContainer">
+        <div class="outlineContainer">
+            <img id="threeCat" src="assets/threeCats.jpg" alt="">
+            <p class="outlineText text">This project explores New Zealand’s love for cats and dogs through an
+                interactive
+                web-based visualisation.</p>
+            <p class="outlineText text">We aim to reveal not just ownership trends, but also how companion animals shape
+                people’s
+                lifestyles, communities, and daily choices.</p>
+            <p class="outlineText text">The visualisation moves from macro to micro, starting with national ownership
+                rates
+                and
+                geographic differences, and drilling down to pet acquisition methods, ownership motivations, income
+                patterns, and barriers faced by future pet owners.</p>
+            <p class="outlineText text">Our primary dataset is the Companion Animals New Zealand Pet Data Report 2024,
+                based
+                on a
+                national survey conducted by Companion Animals NZ.</p>
+        </div>
 
-    <div class="outlineContainer">
-        <img id="threeCat" src="assets/threeCats.jpg" alt="">
-        <p class="outlineText">This project explores New Zealand’s love for cats and dogs through an interactive web-based visualisation.</p>
-        <p class="outlineText">We aim to reveal not just ownership trends, but also how companion animals shape people’s lifestyles, communities, and daily choices.</p>
-        <p class="outlineText">The visualisation moves from macro to micro, starting with national ownership rates and geographic differences, and drilling down to pet acquisition methods, ownership motivations, income patterns, and barriers faced by future pet owners.</p>
-        <p class="outlineText">Our primary dataset is the Companion Animals New Zealand Pet Data Report 2024, based on a national survey conducted by Companion Animals NZ.</p>
+        <section class="regionContainer">
+            <img class="title" src="assets/region-title.png"/>
 
+            <div class="regionVis">
+                <div class="regionText">
+                    <p class="text">This graph presents the regional distribution of cat and dog ownership in New
+                        Zealand, based on
+                        household survey data.</p>
+
+                    <p class="text">Households in the Rest of the North Island are the most likely to own a dog
+                        (38%).</p>
+
+                    <p class="text">Auckland has the lowest dog ownership rate (24%), which is significantly lower than
+                        other
+                        regions. Cat ownership follows a similar pattern.</p>
+
+                    <p class="text">Rest of the North Island leads with 46% of households owning a cat. Auckland again
+                        shows the
+                        lowest ownership rate at 35%.</p>
+
+                    <p class="text">Households in the Rest of the South Island report equal ownership rates for cats and
+                        dogs, both
+                        at 36%.</p>
+
+                    <p class="text">The sample sizes for each region vary and may influence the statistical reliability
+                        of the pet
+                        ownership rates presented. In particular:</p>
+
+                    <p class="text">Regions with larger base sizes—such as Rest of the North Island (n=666) and Auckland
+                        (n=627)—provide stronger confidence in the reported trends.</p>
+
+                    <p class="text">However, regions with smaller sample sizes (such as Rest of South Island and
+                        Canterbury) may have
+                        wider margins of error, and their reported percentages should be interpreted with caution.</p>
+
+                    <p class="text">*Rest of North Island excludes Auckland and Wellington</p>
+                    <p class="text">**Rest of South Island excludes Canterbury</p>
+                </div>
+                <div id="regionEChart" class="EChart map">
+                    <div class="regionBtnContainer">
+                        <button class="active" id="catsBtn">Cats</button>
+                        <button id="dogsBtn">Dogs</button>
+                    </div>
+                    <div id="regionLegend">
+                    </div>
+                    <div id="regionMap"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="popContainer">
+            <div class="popLeft"></div>
+            <div class="popRight">
+
+            </div>
+        </section>
     </div>
 </div>
+
+
+<script src="js/echarts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+<script src="js/geo.js"></script>
+<script src="js/charts.js"></script>
+
 </body>
 </html>
