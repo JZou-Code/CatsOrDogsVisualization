@@ -1,0 +1,115 @@
+<svg width="587" height="388" viewBox="0 0 587 388" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="147.902%" id="wb6oq8iize">
+            <stop stop-color="#77F874" offset="0%"/>
+            <stop stop-color="#4C533E" offset="99.803%"/>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="147.902%" id="jrc42spyrf">
+            <stop stop-color="#77F874" offset="0%"/>
+            <stop stop-color="#4C533E" offset="99.803%"/>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="147.902%" id="hx3szios4g">
+            <stop stop-color="#77F874" offset="0%"/>
+            <stop stop-color="#4C533E" offset="99.803%"/>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="sns4mltash">
+            <stop stop-color="#FFA995" offset="0%"/>
+            <stop stop-color="#F65D5D" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="rxzlrsb29i">
+            <stop stop-color="#FFA995" offset="0%"/>
+            <stop stop-color="#F65D5D" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="vmnszyuavj">
+            <stop stop-color="#FFA995" offset="0%"/>
+            <stop stop-color="#F65D5D" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="tq1qienf9k">
+            <stop stop-color="#FFA995" offset="0%"/>
+            <stop stop-color="#F65D5D" offset="100%"/>
+        </linearGradient>
+        <filter x="-64.3%" y="-1.9%" width="228.6%" height="104.8%" filterUnits="objectBoundingBox" id="k1pacabgha">
+            <feMorphology radius="2" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" in="shadowBlurOuter1"/>
+        </filter>
+        <filter x="-43.8%" y="-1.3%" width="187.5%" height="103.7%" filterUnits="objectBoundingBox" id="n8yiq1xkfc">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" in="shadowBlurOuter1"/>
+        </filter>
+        <rect id="qqvknnsj3b" x="0" y="0" width="14" height="376" rx="7"/>
+        <rect id="30b5j3itpd" x="56.015" y="0" width="16" height="376" rx="8"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(0 4)">
+            <text font-family="MarkerFelt-Thin, Marker Felt" font-size="18" font-weight="300" fill="#B96A24">
+                        <tspan x="542.949" y="21.617">0%</tspan>
+                    </text>
+            <text font-family="Futura-Medium, Futura" font-size="14" font-weight="400" fill="#A4A4A4">
+                        <tspan x="399.363" y="19.617">Cat</tspan>
+                    </text>
+            <text font-family="Futura-Medium, Futura" font-size="14" font-weight="400" fill="#A4A4A4">
+                        <tspan x="456.899" y="19.617">Dog</tspan>
+                    </text>
+            <g transform="translate(513)">
+                <use fill="#000" filter="url(#k1pacabgha)" xlink:href="#qqvknnsj3b"/>
+                <use stroke-opacity=".774" stroke="#585858" stroke-width="4" fill="#F7D7D7" xlink:href="#qqvknnsj3b"/>
+            </g>
+            <path stroke-opacity=".842" stroke="#5A5A5A" stroke-width="4" fill="#D8D8D8" stroke-linecap="square" d="M513.318 76.5h13.364M513.318 152.5h13.364M513.318 228.5h13.364M513.318 302.5h13.364"/>
+            <text font-family="MarkerFelt-Thin, Marker Felt" font-size="18" font-weight="300" fill="#B96A24">
+                        <tspan x="543.819" y="88.015">20%</tspan>
+                    </text>
+            <text font-family="MarkerFelt-Thin, Marker Felt" font-size="18" font-weight="300" fill="#B96A24">
+                        <tspan x="543.819" y="161.722">40%</tspan>
+                    </text>
+            <text font-family="MarkerFelt-Thin, Marker Felt" font-size="18" font-weight="300" fill="#B96A24">
+                        <tspan x="542.819" y="235.429">60%</tspan>
+                    </text>
+            <text font-family="MarkerFelt-Thin, Marker Felt" font-size="18" font-weight="300" fill="#B96A24">
+                        <tspan x="543.012" y="306.136">80%</tspan>
+                    </text>
+            <text font-family="MarkerFelt-Thin, Marker Felt" font-size="18" font-weight="300" fill="#B96A24">
+                        <tspan x="541.343" y="368.842">100%</tspan>
+                    </text>
+            <use fill="#000" filter="url(#n8yiq1xkfc)" xlink:href="#30b5j3itpd"/>
+            <rect stroke="#707070" stroke-width="4" stroke-linejoin="square" fill="#869DD6" x="58.015" y="2" width="12" height="372" rx="6"/>
+            <text font-family="MarkerFelt-Thin, Marker Felt" font-size="18" font-weight="300" fill="#B96A24">
+                        <tspan x="2.48" y="59.085">2011</tspan>
+                    </text>
+            <text font-family="MarkerFelt-Thin, Marker Felt" font-size="18" font-weight="300" fill="#B96A24">
+                        <tspan x="2.48" y="151.873">2015</tspan>
+                    </text>
+            <text font-family="MarkerFelt-Thin, Marker Felt" font-size="18" font-weight="300" fill="#B96A24">
+                        <tspan x="2.48" y="340.219">2024</tspan>
+                    </text>
+            <text font-family="MarkerFelt-Thin, Marker Felt" font-size="18" font-weight="300" fill="#B96A24">
+                        <tspan x="2.48" y="246.046">2020</tspan>
+                    </text>
+            <circle fill="#EFC0C0" cx="389.5" cy="14.5" r="6.5"/>
+            <circle fill="#63B87D" cx="446.5" cy="14.5" r="6.5"/>
+            <text font-family="Futura-MediumItalic, Futura" font-size="12" font-style="italic" font-weight="400" fill="#888">
+                        <tspan x="208" y="371">Base: All respondents n=2,058</tspan>
+                    </text>
+        </g>
+        <path d="M73.515 6.558c107.034 14.26 183.283 45.895 228.643 95.07 45.773 49.62 115.677 78.8 209.793 87.397v4.446c-108.824 15.87-185.136 2.523-228.725-40.469-47.156-46.51-117.03-67.633-209.711-63.175z" stroke="url(#wb6oq8iize)" stroke-width="3" opacity=".827" transform="translate(0 4)"/>
+        <path d="M73.515 92.78c90.224-7.571 161.65 14.21 214.226 65.48 41.155 40.132 131.859 38.043 176.333 34.65 14.6-1.114 29.97-6.7 46.095-16.802l.594-.375-.826.854c-32.574 33.509-65.52 54.558-98.871 63.08l-1.032.26c-34.426 8.528-69.26 3.684-104.504-14.483-71.858-37.039-149.196-50.209-232.015-39.5z" stroke="url(#jrc42spyrf)" stroke-width="3" opacity=".491" transform="translate(0 4)"/>
+        <path d="M508.246 174.348c-16.538 41.174-39.833 70.725-69.952 88.597-32.496 19.281-72.897 24.944-121.18 17.093-96.713-15.727-177.911-15.069-243.6 1.923v-92.994c44.065-5.815 86.187-4.967 126.368 2.552 40.555 7.59 77.221 20.642 109.996 39.167 36.16 17.097 72.142 20.443 108.04 10.119 33.18-9.544 63.306-31.677 90.328-66.457z" stroke="url(#hx3szios4g)" stroke-width="3" opacity=".927" transform="translate(0 4)"/>
+        <path d="M72.015 287.904v85.864c65.765-28.39 157.092-46.394 273.98-54.011 116.888-7.617 172.822-61.513 167.802-161.687-12.108 37.343-32.677 68.318-61.705 92.925-43.543 36.91-74.6 42.249-130.847 34.008-57.815-8.472-61.319-11.486-105.747-11.486-73.817 0-121.645 4.796-143.483 14.387z" stroke="#48B04D" stroke-width="5" opacity=".628"/>
+        <path d="M71.322 186.961v97.995c109.799-26.274 198.986-41.904 267.563-46.89 68.576-4.987 126.534-39.564 173.874-103.73-9.166 9.27-48.969 23.758-119.408 43.465-57.592 16.113-120.556-8.044-201.35-10.92-37.517-1.337-77.744 5.357-120.679 20.08z" stroke="url(#sns4mltash)" stroke-width="7" opacity=".5" transform="translate(0 4)"/>
+        <path d="M71.322 283.904v85.864c121.818-26.517 225.113-55.83 309.886-87.941 84.772-32.11 128.738-83.583 131.897-154.416-46.243 72.014-102.21 108.022-167.902 108.022-65.691 0-156.985 16.157-273.88 48.471z" stroke="url(#rxzlrsb29i)" stroke-width="8" opacity=".5" transform="translate(0 4)"/>
+        <path d="M71.322 4.847v86.556c63.831-13.067 136.748-4.088 218.75 26.937 82.002 31.024 156.23 29.215 222.687-5.426-42.08 21.898-98.032 12.881-167.857-27.05-69.826-39.932-161.019-66.937-273.58-81.017z" stroke="url(#vmnszyuavj)" stroke-width="5" opacity=".502" transform="translate(0 4)"/>
+        <path d="M71.322 91.403v96.25c60.506-24.28 130.558-27.002 210.159-8.169 79.6 18.834 156.693-4.858 231.278-71.076-59.22 38.981-130.969 42.681-215.246 11.1-84.278-31.583-159.675-40.951-226.19-28.105z" stroke="url(#tq1qienf9k)" stroke-width="7" opacity=".433" transform="translate(0 4)"/>
+        <g transform="translate(230.586 134.873)">
+            <ellipse stroke="#C46405" stroke-width="7" fill="#E88640" opacity=".783" cx="61.326" cy="62.667" rx="57.826" ry="59.167"/>
+            <text font-family="MarkerFelt-Thin, Marker Felt" font-size="18" font-weight="300" fill="#FFFDFD">
+                        <tspan x="36.627" y="52.085">Animal </tspan>
+                        <tspan x="25.53" y="72.085">Population </tspan>
+                        <tspan x="43.314" y="92.085">Trend</tspan>
+                    </text>
+        </g>
+    </g>
+</svg>

@@ -43,7 +43,7 @@
 
 .text {
     font-family: Futura, serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
     font-stretch: normal;
     font-style: italic;
@@ -116,8 +116,7 @@ button:active{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 30%;
-    transform: translateY(-50%);
+    /*top: 10%;*/
 }
 
 #regionLegend{
@@ -141,10 +140,16 @@ button:active{
 .popContainer{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
 }
 
 .popLeft{
     width: 40%;
+}
+
+#popImage{
+    width: 100%;
 }
 
 .popRight{
@@ -180,6 +185,25 @@ button:active{
 
 #sourceBase{
     color: #eea614;
+}
+
+.ageContainer {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+#ageTitle{
+    display: block;
+    width: 21.7%;
+    margin: 0 auto;
+}
+
+#test{
+    width: 90%;
+}
+
+.ageImage{
+    width: 100%;
 }
 
 

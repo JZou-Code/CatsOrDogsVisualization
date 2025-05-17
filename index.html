@@ -85,7 +85,9 @@
         </section>
 
         <section class="popContainer">
-            <div class="popLeft"></div>
+            <div class="popLeft">
+                <img id="popImage" src="assets/pop-image.svg">
+            </div>
             <div class="popRight">
                 <img id="popTitle" src="assets/pop-title.png">
                 <p class="text">Cats remain the most popular companion animal (40% of households) and over the past 4
@@ -114,18 +116,56 @@
 
             <div class="sourceBottom">
                 <p id="sourceBase" class="text">Base size(individual pets): 1,289 cats and 848 dogs</p>
-                <p class="text">The ways in which New Zealanders acquire cats and dogs differ notably. Cats are most commonly
+                <p class="text">The ways in which New Zealanders acquire cats and dogs differ notably. Cats are most
+                    commonly
                     obtained through animal rescue organisations, particularly the SPCA (22%). 16% of cats were found or
                     adopted as strays, compared to just 1% of dogs, both suggesting cats are more commonly acquired
                     informally or opportunistically.</p>
-                <p class="text">While dogs are most frequently acquired from breeders (34%) or via private advertisements (21%),
+                <p class="text">While dogs are most frequently acquired from breeders (34%) or via private
+                    advertisements (21%),
                     indicating more formal and commercial acquisition patterns. Informal networks (e.g. friends, family,
                     neighbours) also play a key role in both cat and dog acquisition.</p>
             </div>
         </section>
 
         <section class="ageContainer">
+            <img id="ageTitle" src="assets/age-title.png">
 
+            <div id="test">
+                <img class="ageImage" src="assets/age/age-1.svg"/>
+                <img class="ageImage" src="assets/age/age-2.svg"/>
+                <img class="ageImage" src="assets/age/age-3.svg"/>
+                <img class="ageImage" src="assets/age/age-4.svg"/>
+                <img class="ageImage" src="assets/age/age-5.svg"/>
+            </div>
+
+
+            <svg width="400" height="240">
+                <!-- 1. 定义边框路径 -->
+                <rect
+                        id="border"
+                        x="20" y="20"
+                        width="360" height="200"
+                        rx="12" ry="12"
+                        fill="none"
+                        stroke="#333"
+                        stroke-width="2"
+                />
+
+                <!-- 2. 小球 -->
+                <circle r="6" fill="red">
+                    <!-- 3. animateMotion：引用 border 路径，让小球沿着它跑 -->
+                    <animateMotion
+                            begin="border.mouseenter"
+                            end="border.mouseleave"
+                            dur="5s"
+                            repeatCount="indefinite"
+                            rotate="auto"
+                    >
+                        <mpath xlink:href="#border"/>
+                    </animateMotion>
+                </circle>
+            </svg>
         </section>
     </div>
 </div>

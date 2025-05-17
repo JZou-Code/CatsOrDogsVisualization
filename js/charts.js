@@ -126,87 +126,87 @@ const dogsBtn = document.querySelector('#dogsBtn');
     window.addEventListener('resize', () => chart.resize());
 })();
 
-(function () {
-    const chart = echarts.init(document.querySelector('.popLeft'))
-
-    const option = {
-        parallelAxis: [{
-            dim: 0,
-            name: 'Year',
-            type: 'category',
-            data: ['2011', '2015', '2020', '2024'],
-            axisLine: {
-                lineStyle: {
-                    color: '#333',
-                    width: 2,
-                }
-            },
-            axisTick: {
-                length: 6,
-                lineStyle: {type: 'dashed'}
-            },
-            axisLabel: {
-                fontFamily: 'Comic Sans MS, "手写体"',
-                fontSize: 14
-            }
-        }, {
-            dim: 1,
-            name: '%',
-            type: 'value',
-            axisLabel: {
-                formatter: v => v + '%',
-                fontFamily: 'Comic Sans MS'
-            },
-            axisLine: {
-                lineStyle: {
-                    color: '#333',
-                    width: 2,
-                }
-            }
-        }],
-        legend: {
-            show: true
-        },
-        series: [{
-            name: 'Cat',
-            type: 'parallel',
-            smooth: true,
-            lineStyle: {
-                width: 4,
-                color: 'green',
-                shadowBlur: 10,
-                shadowColor: 'rgba(0,0,0,0.2)'
-            },
-            data: [
-                ['2011', 48],
-                ['2015', 44],
-                ['2020', 41],
-                ['2024', 40]
-            ],
-        }, {
-            name: 'Dog',
-            type: 'parallel',
-            lineStyle: {
-                width: 4,
-                color: 'red',
-                shadowBlur: 10,
-                shadowColor: 'rgba(0,0,0,0.2)'
-            },
-            data: [
-                ['2011', 29],
-                ['2015', 28],
-                ['2020', 34],
-                ['2024', 31]
-            ]
-        }
-        ]
-    };
-
-    chart.setOption(option);
-
-    window.addEventListener('resize', () => chart.resize());
-
-})();
+// (function () {
+//     const chart = echarts.init(document.querySelector('.popLeft'))
+//
+//     const option = {
+//         parallelAxis: [{
+//             dim: 0,
+//             name: 'Year',
+//             type: 'category',
+//             data: ['2011', '2015', '2020', '2024'],
+//             axisLine: {
+//                 lineStyle: {
+//                     color: '#333',
+//                     width: 2,
+//                 }
+//             },
+//             axisTick: {
+//                 length: 6,
+//                 lineStyle: {type: 'dashed'}
+//             },
+//             axisLabel: {
+//                 fontFamily: 'Comic Sans MS, "手写体"',
+//                 fontSize: 14
+//             }
+//         }, {
+//             dim: 1,
+//             name: '%',
+//             type: 'value',
+//             axisLabel: {
+//                 formatter: v => v + '%',
+//                 fontFamily: 'Comic Sans MS'
+//             },
+//             axisLine: {
+//                 lineStyle: {
+//                     color: '#333',
+//                     width: 2,
+//                 }
+//             }
+//         }],
+//         legend: {
+//             show: true
+//         },
+//         series: [{
+//             name: 'Cat',
+//             type: 'parallel',
+//             smooth: true,
+//             lineStyle: {
+//                 width: 4,
+//                 color: 'green',
+//                 shadowBlur: 10,
+//                 shadowColor: 'rgba(0,0,0,0.2)'
+//             },
+//             data: [
+//                 ['2011', 48],
+//                 ['2015', 44],
+//                 ['2020', 41],
+//                 ['2024', 40]
+//             ],
+//         }, {
+//             name: 'Dog',
+//             type: 'parallel',
+//             lineStyle: {
+//                 width: 4,
+//                 color: 'red',
+//                 shadowBlur: 10,
+//                 shadowColor: 'rgba(0,0,0,0.2)'
+//             },
+//             data: [
+//                 ['2011', 29],
+//                 ['2015', 28],
+//                 ['2020', 34],
+//                 ['2024', 31]
+//             ]
+//         }
+//         ]
+//     };
+//
+//     chart.setOption(option);
+//
+//     window.addEventListener('resize', () => chart.resize());
+//
+// })();
 
 (function (){
     const chart = echarts.init(document.querySelector('.sourceMid'));
@@ -347,3 +347,125 @@ const dogsBtn = document.querySelector('#dogsBtn');
     chart.setOption(option);
     window.addEventListener('resize', () => chart.resize());
 })();
+
+// (function (){
+//     const chart = echarts.init(document.querySelector('.ageContainer'));
+//
+//     // —— 1. 分类 + 百分比数据 —— //
+//     const categories = [
+//         'Companionship / love / affection',
+//         'Relaxation',
+//         'Encourage exercise',
+//         'Security',
+//         'Other hobby / competition',
+//         'They needed a home / adopted us',
+//         'Fun for the children',
+//         'I’ve had this type of pet in the past',
+//         'Pest control (e.g. hunt mice)',
+//         'Inherited from a friend / family member',
+//         'It was someone else’s decision',
+//         'It was a gift'
+//     ];
+//     const catsPct = [80,65,50,40,35,30,25,20,15,10,5,2];
+//     const dogsPct = [90,75,60,50,45,40,30,25,20,15,10,5];
+//
+//     // —— 2. 构造极坐标下的散点数据 —— //
+//     // 外圈 Cats radius = 1.0, 内圈 Dogs radius = 0.8
+//     const catsData = categories.map((name,i)=>{
+//         const angle = catsPct[i] * 3.6; // 百分比→度
+//         return {
+//             name,
+//             value: [angle, 1.0],
+//             symbolSize: 12,
+//             itemStyle: { color: '#F5A9B8', opacity: 0.3 },
+//             emphasis: { itemStyle: { opacity: 1 } },
+//             label: {
+//                 show: true,
+//                 formatter: '{b}',
+//                 position: 'outside',
+//                 distance: 20,
+//                 rotate: angle - 90,
+//                 color: '#F5A9B8',
+//                 fontSize: 12
+//             }
+//         };
+//     });
+//     const dogsData = categories.map((name,i)=>{
+//         const angle = dogsPct[i] * 3.6;
+//         return {
+//             name,
+//             value: [angle, 0.8],
+//             symbolSize: 12,
+//             itemStyle: { color: '#71C383', opacity: 0.3 },
+//             emphasis: { itemStyle: { opacity: 1 } },
+//             label: {
+//                 show: true,
+//                 formatter: '{b}',
+//                 position: 'outside',
+//                 distance: 20,
+//                 rotate: angle - 90,
+//                 color: '#71C383',
+//                 fontSize: 12
+//             }
+//         };
+//     });
+//
+//     // —— 3. ECharts 配置 —— //
+//     const option = {
+//         tooltip: {
+//             trigger: 'item',
+//             formatter: '{a}<br/>{b}: {@[2]}%'
+//         },
+//         angleAxis: {
+//             type: 'value',
+//             startAngle: 90,
+//             min: 0,
+//             max: 360,
+//             clockwise: true,
+//             axisLine: { show: false },
+//             axisTick: {
+//                 show: true,
+//                 lineStyle: { color: '#ccc' },
+//                 length: 6,
+//                 interval: 30
+//             },
+//             splitLine: {
+//                 show: false
+//             },
+//             axisLabel: {
+//                 show: true,
+//                 formatter: v => `${v/3.6}%`,
+//                 distance: 10
+//             }
+//         },
+//         radiusAxis: {
+//             type: 'value',
+//             min: 0,
+//             max: 1.1,  // 略大于 1.0，留出标签空间
+//             show: false
+//         },
+//         polar: {
+//             center: ['50%', '50%'],
+//             radius: '80%'
+//         },
+//         series: [
+//             {
+//                 name: 'Dogs',
+//                 type: 'scatter',
+//                 coordinateSystem: 'polar',
+//                 data: dogsData,
+//                 emphasis: { focus: 'series' }
+//             },
+//             {
+//                 name: 'Cats',
+//                 type: 'scatter',
+//                 coordinateSystem: 'polar',
+//                 data: catsData,
+//                 emphasis: { focus: 'series' }
+//             }
+//         ]
+//     };
+//
+//     chart.setOption(option);
+//     window.addEventListener('resize', () => chart.resize());
+// })();
