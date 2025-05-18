@@ -564,37 +564,41 @@ const dogsBtn = document.querySelector('#dogsBtn');
     const chart = echarts.init(document.querySelector('#barChart'));
 
     const rawData=[
-        {name: 'Time commitment', value: 49, itemStyle: {color: '#debe89'}},
-        {name: 'Having a pet is expensive', value: 48, itemStyle: {color: '#845b74'}},
-        {name: 'Too much responsibility', value: 35, itemStyle: {color: '#ae6357'}},
+        {name: 'Time commitment', word:'Time', value: 49, itemStyle: {color: '#debe89'}},
+        {name: 'Having a pet is expensive', word:'Cost', value: 48, itemStyle: {color: '#845b74'}},
+        {name: 'Too much responsibility', word:'Responsibility', value: 35, itemStyle: {color: '#ae6357'}},
         {
             name: 'They are messy(e.g. shedding of fur,tracking dirt into house)',
+            word:'Messy',
             value: 29,
             itemStyle: {color: '#726e4b'}
         },
-        {name: 'Sadness when the pet passes away', value: 20, itemStyle: {color: '#516982'}},
-        {name: 'Animal Safety', value: 14, itemStyle: {color: '#8b775c'}},
+        {name: 'Sadness when the pet passes away', word:'Loss', value: 20, itemStyle: {color: '#516982'}},
+        {name: 'Animal Safety', word:'Safety', value: 14, itemStyle: {color: '#8b775c'}},
         {
             name: 'I’m worried about potential impact on native species',
+            word:'Species Impact',
             value: 17,
             itemStyle: {color: '#9f6076'}
         },
-        {name: 'Odour', value: 16, itemStyle: {color: '#9b9b5e'}},
-        {name: 'Away from home often/like to travel', value: 11, itemStyle: {color: '#457277'}},
-        {name: 'I do not like pets', value: 10, itemStyle: {color: '#615277'}},
-        {name: 'Other', value: 13, itemStyle: {color: '#548267'}},
-        {name: 'They are noisy(e.g. barking, meowing)', value: 11, itemStyle: {color: '#67845b'}},
+        {name: 'Odour', word:'Odour', value: 16, itemStyle: {color: '#9b9b5e'}},
+        {name: 'Away from home often/like to travel', word:'Travel', value: 11, itemStyle: {color: '#457277'}},
+        {name: 'I do not like pets', word:'Dislike', value: 10, itemStyle: {color: '#615277'}},
+        {name: 'Other', word:'Other', value: 13, itemStyle: {color: '#548267'}},
+        {name: 'They are noisy(e.g. barking, meowing)', word:'Noise', value: 11, itemStyle: {color: '#67845b'}},
         {
             name: 'Personal safety issues(e.g. bites, scratches, disease)',
+            word:'Safety Issues',
             value: 6,
             itemStyle: {color: '#7b7b7b'}
         },
         {
             name: 'Not suitable/allowed where I live(e.g. apartment, retirement home)',
+            word:'Restrictions',
             value: 6,
             itemStyle: {color: '#907353'}
         },
-        {name: 'I\'m worried about impact on global environment', value: 5, itemStyle: {color: '#79749d'}}
+        {name: 'I\'m worried about impact on global environment', word:'Env.Impact', value: 5, itemStyle: {color: '#79749d'}}
     ];
 
 
@@ -641,6 +645,7 @@ const dogsBtn = document.querySelector('#dogsBtn');
             {
                 type: 'treemap',
                 roam: false,
+                nodeClick: false,
                 left: 0,
                 right: 0,
                 top: 0,
@@ -648,12 +653,13 @@ const dogsBtn = document.querySelector('#dogsBtn');
                 leafDepth: 1,
                 label: {
                     show: true,
-                    formatter: '{b}',
+                    // formatter: '{b}',
+                    formatter: (params)=>{return params.data.word},
                     color: '#fff',
                     ellipsis: '...',
                     overflow: 'truncate',
                     lineOverflow: 'break',
-                    fontSize: 24
+                    fontSize: 20
                 },
                 upperLabel: {
                     show: false
@@ -666,39 +672,7 @@ const dogsBtn = document.querySelector('#dogsBtn');
                 itemStyle: {
                     gapWidth: 2,
                 },
-                data: [
-                    {name: 'Time commitment', value: 49, itemStyle: {color: '#debe89'}},
-                    {name: 'Having a pet is expensive', value: 48, itemStyle: {color: '#845b74'}},
-                    {name: 'Too much responsibility', value: 35, itemStyle: {color: '#ae6357'}},
-                    {
-                        name: 'They are messy(e.g. shedding of fur,tracking dirt into house)',
-                        value: 29,
-                        itemStyle: {color: '#726e4b'}
-                    },
-                    {name: 'Sadness when the pet passes away', value: 20, itemStyle: {color: '#516982'}},
-                    {name: 'Animal Safety', value: 14, itemStyle: {color: '#8b775c'}},
-                    {
-                        name: 'Worried about potential impact on native species',
-                        value: 17,
-                        itemStyle: {color: '#9f6076'}
-                    },
-                    {name: 'Odour', value: 16, itemStyle: {color: '#9b9b5e'}},
-                    {name: 'Away from home often/like to travel', value: 11, itemStyle: {color: '#457277'}},
-                    {name: 'I do not like pets', value: 10, itemStyle: {color: '#615277'}},
-                    {name: 'Other', value: 13, itemStyle: {color: '#548267'}},
-                    {name: 'They are noisy(e.g. barking, meowing)', value: 11, itemStyle: {color: '#67845b'}},
-                    {
-                        name: 'Personal safety issues(e.g. bites, scratches, disease)',
-                        value: 6,
-                        itemStyle: {color: '#7b7b7b'}
-                    },
-                    {
-                        name: 'Not suitable/allowed where I live(e.g. apartment, retirement home)',
-                        value: 6,
-                        itemStyle: {color: '#907353'}
-                    },
-                    {name: 'Worried about impact on global environment', value: 5, itemStyle: {color: '#79749d'}}
-                ]
+                data: rawData
             }
         ]
     };
