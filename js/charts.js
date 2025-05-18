@@ -208,7 +208,7 @@ const dogsBtn = document.querySelector('#dogsBtn');
 //
 // })();
 
-(function (){
+(function () {
     const chart = echarts.init(document.querySelector('.sourceMid'));
     const w = chart.getWidth(), h = chart.getHeight();
 
@@ -263,7 +263,7 @@ const dogsBtn = document.querySelector('#dogsBtn');
     const iconSize = 30;
 
     const option = {
-        legend:{},
+        legend: {},
         tooltip: {
             trigger: 'item',
             axisPointer: {
@@ -469,3 +469,150 @@ const dogsBtn = document.querySelector('#dogsBtn');
 //     chart.setOption(option);
 //     window.addEventListener('resize', () => chart.resize());
 // })();
+
+(function () {
+    const chart = echarts.init(document.querySelector('#barChart'));
+
+    const rawData=[
+        {name: 'Time commitment', value: 49, itemStyle: {color: '#debe89'}},
+        {name: 'Having a pet is expensive', value: 48, itemStyle: {color: '#845b74'}},
+        {name: 'Too much responsibility', value: 35, itemStyle: {color: '#ae6357'}},
+        {
+            name: 'They are messy(e.g. shedding of fur,tracking dirt into house)',
+            value: 29,
+            itemStyle: {color: '#726e4b'}
+        },
+        {name: 'Sadness when the pet passes away', value: 20, itemStyle: {color: '#516982'}},
+        {name: 'Animal Safety', value: 14, itemStyle: {color: '#8b775c'}},
+        {
+            name: 'I’m worried about potential impact on native species',
+            value: 17,
+            itemStyle: {color: '#9f6076'}
+        },
+        {name: 'Odour', value: 16, itemStyle: {color: '#9b9b5e'}},
+        {name: 'Away from home often/like to travel', value: 11, itemStyle: {color: '#457277'}},
+        {name: 'I do not like pets', value: 10, itemStyle: {color: '#615277'}},
+        {name: 'Other', value: 13, itemStyle: {color: '#548267'}},
+        {name: 'They are noisy(e.g. barking, meowing)', value: 11, itemStyle: {color: '#67845b'}},
+        {
+            name: 'Personal safety issues(e.g. bites, scratches, disease)',
+            value: 6,
+            itemStyle: {color: '#7b7b7b'}
+        },
+        {
+            name: 'Not suitable/allowed where I live(e.g. apartment, retirement home)',
+            value: 6,
+            itemStyle: {color: '#907353'}
+        },
+        {name: 'I\'m worried about impact on global environment', value: 5, itemStyle: {color: '#79749d'}}
+    ];
+
+
+    const option = {
+        tooltip: {
+            trigger: 'item',
+            backgroundColor: 'transparent',
+            borderWidth: 0,
+            padding: 0,
+            appendToBody: true,
+            formatter: function (params) {
+                // params.name → Time commitment
+                // params.value → 49
+                return `
+        <div style="
+          border-radius: 6px;
+          overflow: hidden;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+          font-family: sans-serif;
+          min-width: 140px;
+        ">
+          <div style="
+            background: #333;
+            color: #fff;
+            padding: 8px 12px;
+            font-weight: bold;
+            font-size: 14px;
+          ">
+            ${params.name}
+          </div>
+          <div style="
+            background: #fff;
+            color: #333;
+            padding: 6px 12px;
+            font-size: 13px;
+          ">
+            Percentage(%) ${params.value}
+          </div>
+        </div>
+      `;
+            }
+        },
+        series: [
+            {
+                type: 'treemap',
+                roam: false,
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0,
+                leafDepth: 1,
+                label: {
+                    show: true,
+                    formatter: '{b}',
+                    color: '#fff',
+                    ellipsis: '...',
+                    overflow: 'truncate',
+                    lineOverflow: 'break',
+                    fontSize: 24
+                },
+                upperLabel: {
+                    show: false
+                },
+                breadcrumb: {
+                    show: false
+                },
+
+                colorMappingBy: 'index',
+                itemStyle: {
+                    gapWidth: 2,
+                },
+                data: [
+                    {name: 'Time commitment', value: 49, itemStyle: {color: '#debe89'}},
+                    {name: 'Having a pet is expensive', value: 48, itemStyle: {color: '#845b74'}},
+                    {name: 'Too much responsibility', value: 35, itemStyle: {color: '#ae6357'}},
+                    {
+                        name: 'They are messy(e.g. shedding of fur,tracking dirt into house)',
+                        value: 29,
+                        itemStyle: {color: '#726e4b'}
+                    },
+                    {name: 'Sadness when the pet passes away', value: 20, itemStyle: {color: '#516982'}},
+                    {name: 'Animal Safety', value: 14, itemStyle: {color: '#8b775c'}},
+                    {
+                        name: 'Worried about potential impact on native species',
+                        value: 17,
+                        itemStyle: {color: '#9f6076'}
+                    },
+                    {name: 'Odour', value: 16, itemStyle: {color: '#9b9b5e'}},
+                    {name: 'Away from home often/like to travel', value: 11, itemStyle: {color: '#457277'}},
+                    {name: 'I do not like pets', value: 10, itemStyle: {color: '#615277'}},
+                    {name: 'Other', value: 13, itemStyle: {color: '#548267'}},
+                    {name: 'They are noisy(e.g. barking, meowing)', value: 11, itemStyle: {color: '#67845b'}},
+                    {
+                        name: 'Personal safety issues(e.g. bites, scratches, disease)',
+                        value: 6,
+                        itemStyle: {color: '#7b7b7b'}
+                    },
+                    {
+                        name: 'Not suitable/allowed where I live(e.g. apartment, retirement home)',
+                        value: 6,
+                        itemStyle: {color: '#907353'}
+                    },
+                    {name: 'Worried about impact on global environment', value: 5, itemStyle: {color: '#79749d'}}
+                ]
+            }
+        ]
+    };
+
+    chart.setOption(option);
+    window.addEventListener('resize', () => chart.resize());
+})();

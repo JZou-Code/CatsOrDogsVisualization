@@ -44,7 +44,6 @@
 .text {
     font-family: Futura, serif;
     font-size: 0.9rem;
-    font-weight: 500;
     font-stretch: normal;
     font-style: italic;
     line-height: normal;
@@ -52,6 +51,7 @@
     text-align: justify;
     color: rgba(0, 0, 0, 0.8);
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .title {
@@ -199,12 +199,33 @@ button:active{
 }
 
 #test{
-    width: 90%;
+    width: 80%;
 }
 
 .ageImage{
     width: 100%;
 }
 
+.barContainer{
+    width: 100%;
+}
 
+#barTitleContainer{
+    display: flex;
+    justify-content: end;
+}
+
+#barTitle{
+    width: 53%;
+}
+
+#barChart{
+    width: 100%;
+    aspect-ratio: 1.4/1;
+    margin: 2rem auto;
+}
+
+#barBase{
+    font-weight: normal;
+}
 
