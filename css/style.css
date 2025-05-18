@@ -99,7 +99,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-button:active{
+button:active {
     box-shadow: none;
     transform: scale(1);
 }
@@ -119,7 +119,7 @@ button:active{
     /*top: 10%;*/
 }
 
-#regionLegend{
+#regionLegend {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -128,45 +128,45 @@ button:active{
     flex-wrap: wrap;
 }
 
-.box{
+.box {
     width: 10px;
     height: 10px;
 }
 
-.legendItem{
+.legendItem {
     font-size: 0.6rem;
 }
 
-.popContainer{
+.popContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 5rem;
 }
 
-.popLeft{
+.popLeft {
     width: 40%;
 }
 
-#popImage{
+#popImage {
     width: 100%;
 }
 
-.popRight{
+.popRight {
     width: 55%;
 }
 
-#popTitle{
+#popTitle {
     margin-bottom: 3rem;
     width: 59%;
 }
 
-#sourceTitle{
+#sourceTitle {
     margin-top: 2rem;
     width: 51.3%;
 }
 
-.sourceUp{
+.sourceUp {
     width: 100%;
     margin: 2rem auto 0;
     display: flex;
@@ -174,106 +174,125 @@ button:active{
     justify-content: space-around;
 }
 
-#catsHeader{
+#catsHeader {
     margin-bottom: 0.3rem;
 }
 
-.sourceMid{
+.sourceMid {
     width: 100%;
     height: 500px;
 }
 
-#sourceBase{
+#sourceBase {
     color: #eea614;
 }
 
 .ageContainer {
     width: 100%;
     margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
-#ageTitle{
+
+#ageTitle {
     display: block;
     width: 21.7%;
     margin: 0 auto;
 }
 
-#test{
-    width: 80%;
+.svgContainer {
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.5s;
+    margin-bottom: 0.5rem;
 }
 
-.ageImage{
+.svgContainer svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.svgContainer:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#ageImage5:hover {
+    transform: scale(1.1);
+}
+.ageImage {
     width: 100%;
 }
 
-.barContainer{
+.barContainer {
     width: 100%;
 }
 
-#barTitleContainer{
+#barTitleContainer {
     display: flex;
     justify-content: end;
 }
 
-#barTitle{
+#barTitle {
     width: 53%;
 }
 
-#barChart{
+#barChart {
     width: 100%;
     aspect-ratio: 1.4/1;
     margin: 2rem auto;
 }
 
-#barBase{
+#barBase {
     font-weight: normal;
 }
 
-.pageBottomContainer{
+.pageBottomContainer {
     margin-top: 10rem;
     width: 100%;
     background-color: #7ad2af;
 }
 
-.bottomContent{
+.bottomContent {
     width: 75%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
-.bottomLeft{
+.bottomLeft {
     width: 60.5%;
     margin-top: 4rem;
     margin-bottom: 2rem;
 }
 
-#botImage1{
+#botImage1 {
     width: 71.1%;
     margin-bottom: 1rem;
 }
 
-#botImage2{
+#botImage2 {
     width: 46.2%;
     margin-bottom: 1rem;
 }
 
-.bottomRight{
+.bottomRight {
     width: 28%;
     margin-right: 2%;
     margin-top: 4rem;
     margin-bottom: 2rem;
 }
 
-#botImage3{
+#botImage3 {
     width: 26.8%;
     margin-bottom: 1rem;
 }
 
-.bottomText{
+.bottomText {
     font-weight: normal;
 }
 
-.team{
+.team {
     margin: 0;
 }
