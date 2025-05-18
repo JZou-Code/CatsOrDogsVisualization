@@ -166,7 +166,7 @@ button:active {
     width: 51.3%;
 }
 
-.sourceUp {
+.subGroup {
     width: 100%;
     margin: 2rem auto 0;
     display: flex;
@@ -174,8 +174,14 @@ button:active {
     justify-content: space-around;
 }
 
-#catsHeader {
+
+.subImageCats{
+    width: 7.5%;
     margin-bottom: 0.3rem;
+}
+
+.subImageDogs{
+    width: 8.8%;
 }
 
 .sourceMid {
@@ -191,6 +197,7 @@ button:active {
     width: 100%;
     margin-top: 5rem;
     margin-bottom: 5rem;
+    position: relative;
 }
 
 
@@ -198,6 +205,34 @@ button:active {
     display: block;
     width: 21.7%;
     margin: 0 auto;
+}
+
+#ageSub{
+    margin-bottom: 1rem;
+}
+
+#ageBase{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#ageBasePoint{
+    width: 1.2vw;
+    height: 1.2vw;
+    background-color: lightgray;
+    border-radius: 50%;
+    margin-right: 0.2vw;
+}
+
+#ageBaseText{
+    font-size: 1.2vw;
+    font-family: Arial, serif;
+    font-weight: bold;
+    margin-left: 0.2vw;
 }
 
 .svgContainer {
@@ -223,6 +258,26 @@ button:active {
 }
 .ageImage {
     width: 100%;
+}
+
+.ageContentContainer{
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 30%;
+    background-color: white;
+    padding: 0 1.5rem;
+}
+
+.ageContent{
+    margin-bottom: 8vw;
+}
+
+.ageText{
+    font-weight: normal;
+    font-size: 1.2vw;
 }
 
 .barContainer {
