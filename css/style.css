@@ -229,3 +229,51 @@ button:active{
     font-weight: normal;
 }
 
+.pageBottomContainer{
+    margin-top: 10rem;
+    width: 100%;
+    background-color: #7ad2af;
+}
+
+.bottomContent{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomLeft{
+    width: 60.5%;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+#botImage1{
+    width: 71.1%;
+    margin-bottom: 1rem;
+}
+
+#botImage2{
+    width: 46.2%;
+    margin-bottom: 1rem;
+}
+
+.bottomRight{
+    width: 28%;
+    margin-right: 2%;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+#botImage3{
+    width: 26.8%;
+    margin-bottom: 1rem;
+}
+
+.bottomText{
+    font-weight: normal;
+}
+
+.team{
+    margin: 0;
+}
