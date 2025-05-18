@@ -239,7 +239,7 @@ button:active {
     width: 100%;
     box-sizing: border-box;
     transition: 0.5s;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .svgContainer svg {

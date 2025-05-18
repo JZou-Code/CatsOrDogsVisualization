@@ -509,16 +509,16 @@ const dogsBtn = document.querySelector('#dogsBtn');
             '#7ab792', '#7ab7ab', '#7ab7b7', '#7aabb7', '#7a92b7',
             '#927ab7', '#b17ab7', '#b77ab1', '#b77a92', '#b77a7a'
         ],
-        // legend: {
-        //     type: 'scroll',
-        //     orient: 'vertical',
-        //     left: 10,
-        //     top: 60,
-        //     data: categories,
-        //     itemWidth: 10,
-        //     itemHeight: 10,
-        //     textStyle: {fontSize: 10}
-        // },
+        legend: {
+            type: 'scroll',
+            orient: 'vertical',
+            left: 10,
+            top: 60,
+            data: categories,
+            itemWidth: 10,
+            itemHeight: 10,
+            textStyle: {fontSize: 10}
+        },
         series: [
             {
                 name: 'Cats',
@@ -526,7 +526,7 @@ const dogsBtn = document.querySelector('#dogsBtn');
                 radius: ['10%', '30%'],
                 center: ['70%', '55%'],
                 label: {
-                    show: true,
+                    show: false,
                     formatter: '{b}\n{d}%',
                     fontSize: 12
                 },
@@ -542,7 +542,7 @@ const dogsBtn = document.querySelector('#dogsBtn');
                 radius: ['50%', '70%'],
                 center: ['70%', '55%'],
                 label: {
-                    show: true,
+                    show: false,
                     formatter: '{b}\n{d}%',
                     fontSize: 12
                 },

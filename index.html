@@ -136,7 +136,7 @@
             </div>
 
             <div class="svgContainer">
-                <svg id="ageImage1" width="1080" height="165" viewBox="-8 -8 1096 181"
+                <svg id="ageImage1" width="1080" height="175" viewBox="-10 -10 1100 190"
                      xmlns="http://www.w3.org/2000/svg">
                     <svg class="innerSvg" x="50" y="25" width="979" height="115" viewBox="0 0 979 115"
                          xmlns="http://www.w3.org/2000/svg">
@@ -181,21 +181,41 @@
                           stroke="#3C6E71"
                           stroke-width="3"/>
 
-                    <circle r="8" fill="#3C6E71" visibility="hidden">
+                    <g fill="#3C6E71" id="dogIcon" transform="translate(-10,-13) scale(0.05)" visibility="hidden">
+                        <g>
+                            <path class="st0" d="M481.875,299.344L512,292.219l-4.656-19.641l-24.25,5.734c0-0.328,0.016-0.641,0.016-0.969
+		c0-38.078-10.531-72.781-28.969-102.359c15.438-53.938-13.438-124.547-13.438-124.547S387.813,73,357.719,100.297
+		C327.109,91.063,292.578,88.094,256,88.094c-36.766,0-71.484,2.563-102.203,11.781c-30.156-27.109-82.5-49.438-82.5-49.438
+		S42.406,121.063,57.859,175c-18.422,29.578-28.984,64.281-28.984,102.344c0,0.328,0.031,0.641,0.031,0.969l-24.25-5.734L0,292.219
+		l30.109,7.125c2.672,23.578,9.672,44.75,20.234,63.422L12.875,377.75l7.484,18.75l41.203-16.484
+		c39.797,53.141,111.969,81.547,194.438,81.547c82.453,0,154.641-28.406,194.438-81.547l41.203,16.484l7.484-18.75l-37.469-14.984
+		C472.219,344.094,479.219,322.922,481.875,299.344z"/>
+                        </g>
                         <set attributeName="visibility" to="visible"
                              begin="ageImage1.mouseenter" end="ageImage1.mouseleave"/>
                         <set attributeName="visibility" to="hidden"
                              begin="ageImage1.mouseleave" end="ageImage1.mouseenter"/>
                         <animateMotion begin="ageImage1.mouseenter" end="ageImage1.mouseleave" dur="6s"
-                                       repeatCount="indefinite"
-                                       rotate="auto">
+                                       repeatCount="indefinite">
                             <mpath xlink:href="#border"/>
                         </animateMotion>
-                    </circle>
+                    </g>
+
+<!--                    <circle r="8" fill="#3C6E71" visibility="hidden">-->
+<!--                        <set attributeName="visibility" to="visible"-->
+<!--                             begin="ageImage1.mouseenter" end="ageImage1.mouseleave"/>-->
+<!--                        <set attributeName="visibility" to="hidden"-->
+<!--                             begin="ageImage1.mouseleave" end="ageImage1.mouseenter"/>-->
+<!--                        <animateMotion begin="ageImage1.mouseenter" end="ageImage1.mouseleave" dur="6s"-->
+<!--                                       repeatCount="indefinite"-->
+<!--                                       rotate="auto">-->
+<!--                            <mpath xlink:href="#border"/>-->
+<!--                        </animateMotion>-->
+<!--                    </circle>-->
                 </svg>
             </div>
             <div class="svgContainer">
-                <svg id="ageImage2" width="1080" height="165" viewBox="-8 -8 1096 181"
+                <svg id="ageImage2" width="1080" height="175" viewBox="-10 -10 1100 190"
                      xmlns="http://www.w3.org/2000/svg">
                     <svg class="innerSvg" x="50" y="25" width="979" height="115" viewBox="0 0 979 115"
                          xmlns="http://www.w3.org/2000/svg">
@@ -245,21 +265,42 @@
                           stroke="#D68C8C"
                           stroke-width="3"/>
 
-                    <circle r="8" fill="#D68C8C" visibility="hidden">
+                    <g fill="#D68C8C" id="dogIcon" transform="translate(-10,-13) scale(0.05)" visibility="hidden">
+                        <g>
+                            <path class="st0" d="M481.875,299.344L512,292.219l-4.656-19.641l-24.25,5.734c0-0.328,0.016-0.641,0.016-0.969
+		c0-38.078-10.531-72.781-28.969-102.359c15.438-53.938-13.438-124.547-13.438-124.547S387.813,73,357.719,100.297
+		C327.109,91.063,292.578,88.094,256,88.094c-36.766,0-71.484,2.563-102.203,11.781c-30.156-27.109-82.5-49.438-82.5-49.438
+		S42.406,121.063,57.859,175c-18.422,29.578-28.984,64.281-28.984,102.344c0,0.328,0.031,0.641,0.031,0.969l-24.25-5.734L0,292.219
+		l30.109,7.125c2.672,23.578,9.672,44.75,20.234,63.422L12.875,377.75l7.484,18.75l41.203-16.484
+		c39.797,53.141,111.969,81.547,194.438,81.547c82.453,0,154.641-28.406,194.438-81.547l41.203,16.484l7.484-18.75l-37.469-14.984
+		C472.219,344.094,479.219,322.922,481.875,299.344z"/>
+                        </g>
                         <set attributeName="visibility" to="visible"
                              begin="ageImage2.mouseenter" end="ageImage2.mouseleave"/>
                         <set attributeName="visibility" to="hidden"
                              begin="ageImage2.mouseleave" end="ageImage2.mouseenter"/>
                         <animateMotion begin="ageImage2.mouseenter" end="ageImage2.mouseleave" dur="6s"
-                                       repeatCount="indefinite"
-                                       rotate="auto">
+                                       repeatCount="indefinite">
                             <mpath xlink:href="#border"/>
                         </animateMotion>
-                    </circle>
+
+                    </g>
+
+<!--                    <circle r="8" fill="#D68C8C" visibility="hidden">-->
+<!--                        <set attributeName="visibility" to="visible"-->
+<!--                             begin="ageImage2.mouseenter" end="ageImage2.mouseleave"/>-->
+<!--                        <set attributeName="visibility" to="hidden"-->
+<!--                             begin="ageImage2.mouseleave" end="ageImage2.mouseenter"/>-->
+<!--                        <animateMotion begin="ageImage2.mouseenter" end="ageImage2.mouseleave" dur="6s"-->
+<!--                                       repeatCount="indefinite"-->
+<!--                                       rotate="auto">-->
+<!--                            <mpath xlink:href="#border"/>-->
+<!--                        </animateMotion>-->
+<!--                    </circle>-->
                 </svg>
             </div>
             <div class="svgContainer">
-                <svg id="ageImage3" width="1080" height="165" viewBox="-8 -8 1096 181"
+                <svg id="ageImage3" width="1080" height="175" viewBox="-10 -10 1100 190"
                      xmlns="http://www.w3.org/2000/svg">
                     <svg class="innerSvg" x="50" y="25" width="979" height="115" viewBox="0 0 979 115"
                          xmlns="http://www.w3.org/2000/svg">
@@ -321,6 +362,27 @@
                           stroke="#E8D3A9"
                           stroke-width="3"/>
 
+                    <g fill="#E8D3A9" id="dogIcon" transform="translate(-10,-13) scale(0.05)" visibility="hidden">
+                        <g>
+                            <path class="st0" d="M481.875,299.344L512,292.219l-4.656-19.641l-24.25,5.734c0-0.328,0.016-0.641,0.016-0.969
+		c0-38.078-10.531-72.781-28.969-102.359c15.438-53.938-13.438-124.547-13.438-124.547S387.813,73,357.719,100.297
+		C327.109,91.063,292.578,88.094,256,88.094c-36.766,0-71.484,2.563-102.203,11.781c-30.156-27.109-82.5-49.438-82.5-49.438
+		S42.406,121.063,57.859,175c-18.422,29.578-28.984,64.281-28.984,102.344c0,0.328,0.031,0.641,0.031,0.969l-24.25-5.734L0,292.219
+		l30.109,7.125c2.672,23.578,9.672,44.75,20.234,63.422L12.875,377.75l7.484,18.75l41.203-16.484
+		c39.797,53.141,111.969,81.547,194.438,81.547c82.453,0,154.641-28.406,194.438-81.547l41.203,16.484l7.484-18.75l-37.469-14.984
+		C472.219,344.094,479.219,322.922,481.875,299.344z"/>
+                        </g>
+                        <set attributeName="visibility" to="visible"
+                             begin="ageImage3.mouseenter" end="ageImage3.mouseleave"/>
+                        <set attributeName="visibility" to="hidden"
+                             begin="ageImage3.mouseleave" end="ageImage3.mouseenter"/>
+                        <animateMotion begin="ageImage3.mouseenter" end="ageImage3.mouseleave" dur="6s"
+                                       repeatCount="indefinite">
+                            <mpath xlink:href="#border"/>
+                        </animateMotion>
+
+                    </g>
+
                     <circle r="8" fill="#E8D3A9" visibility="hidden">
                         <set attributeName="visibility" to="visible"
                              begin="ageImage3.mouseenter" end="ageImage3.mouseleave"/>
@@ -335,7 +397,7 @@
                 </svg>
             </div>
             <div class="svgContainer">
-                <svg id="ageImage4" width="1080" height="165" viewBox="-8 -8 1096 181"
+                <svg id="ageImage4" width="1080" height="175" viewBox="-10 -10 1100 190"
                      xmlns="http://www.w3.org/2000/svg">
                     <svg class="innerSvg" x="50" y="25" width="979" height="115" viewBox="0 0 979 115"
                          xmlns="http://www.w3.org/2000/svg">
@@ -401,21 +463,42 @@
                           stroke="#A39BB5"
                           stroke-width="3"/>
 
-                    <circle r="8" fill="#A39BB5" visibility="hidden">
+                    <g fill="#A39BB5" id="dogIcon" transform="translate(-10,-13) scale(0.05)" visibility="hidden">
+                        <g>
+                            <path class="st0" d="M481.875,299.344L512,292.219l-4.656-19.641l-24.25,5.734c0-0.328,0.016-0.641,0.016-0.969
+		c0-38.078-10.531-72.781-28.969-102.359c15.438-53.938-13.438-124.547-13.438-124.547S387.813,73,357.719,100.297
+		C327.109,91.063,292.578,88.094,256,88.094c-36.766,0-71.484,2.563-102.203,11.781c-30.156-27.109-82.5-49.438-82.5-49.438
+		S42.406,121.063,57.859,175c-18.422,29.578-28.984,64.281-28.984,102.344c0,0.328,0.031,0.641,0.031,0.969l-24.25-5.734L0,292.219
+		l30.109,7.125c2.672,23.578,9.672,44.75,20.234,63.422L12.875,377.75l7.484,18.75l41.203-16.484
+		c39.797,53.141,111.969,81.547,194.438,81.547c82.453,0,154.641-28.406,194.438-81.547l41.203,16.484l7.484-18.75l-37.469-14.984
+		C472.219,344.094,479.219,322.922,481.875,299.344z"/>
+                        </g>
                         <set attributeName="visibility" to="visible"
                              begin="ageImage4.mouseenter" end="ageImage4.mouseleave"/>
                         <set attributeName="visibility" to="hidden"
                              begin="ageImage4.mouseleave" end="ageImage4.mouseenter"/>
                         <animateMotion begin="ageImage4.mouseenter" end="ageImage4.mouseleave" dur="6s"
-                                       repeatCount="indefinite"
-                                       rotate="auto">
+                                       repeatCount="indefinite">
                             <mpath xlink:href="#border"/>
                         </animateMotion>
-                    </circle>
+
+                    </g>
+
+<!--                    <circle r="8" fill="#A39BB5" visibility="hidden">-->
+<!--                        <set attributeName="visibility" to="visible"-->
+<!--                             begin="ageImage4.mouseenter" end="ageImage4.mouseleave"/>-->
+<!--                        <set attributeName="visibility" to="hidden"-->
+<!--                             begin="ageImage4.mouseleave" end="ageImage4.mouseenter"/>-->
+<!--                        <animateMotion begin="ageImage4.mouseenter" end="ageImage4.mouseleave" dur="6s"-->
+<!--                                       repeatCount="indefinite"-->
+<!--                                       rotate="auto">-->
+<!--                            <mpath xlink:href="#border"/>-->
+<!--                        </animateMotion>-->
+<!--                    </circle>-->
                 </svg>
             </div>
             <div class="svgContainer">
-                <svg id="ageImage5" width="1080" height="177" viewBox="-8 -8 1096 195"
+                <svg id="ageImage5" width="1080" height="185" viewBox="-10 -10 1106 200"
                      xmlns="http://www.w3.org/2000/svg">
                     <svg x="50" y="25" width="979" height="129" viewBox="0 0 979 129"
                          xmlns="http://www.w3.org/2000/svg">
@@ -461,7 +544,6 @@
                         </g>
                     </svg>
 
-
                     <rect id="border5"
                           x="0" y="0"
                           width="1080" height="180"
@@ -469,18 +551,37 @@
                           fill="none"
                           stroke="#AFD1B6"
                           stroke-width="3"/>
-
-                    <circle r="8" fill="#AFD1B6" visibility="hidden">
+<!--                    <circle r="8" fill="#AFD1B6" visibility="hidden">-->
+<!--                        <set attributeName="visibility" to="visible"-->
+<!--                             begin="ageImage5.mouseenter" end="ageImage5.mouseleave"/>-->
+<!--                        <set attributeName="visibility" to="hidden"-->
+<!--                             begin="ageImage5.mouseleave" end="ageImage5.mouseenter"/>-->
+<!--                        <animateMotion begin="ageImage5.mouseenter" end="ageImage5.mouseleave" dur="6s"-->
+<!--                                       repeatCount="indefinite"-->
+<!--                                       rotate="auto">-->
+<!--                            <mpath xlink:href="#border5"/>-->
+<!--                        </animateMotion>-->
+<!--                    </circle>-->
+                    <g fill="#AFD1B6" id="dogIcon" transform="translate(-10,-13) scale(0.05)" visibility="hidden">
+                        <g>
+                            <path class="st0" d="M481.875,299.344L512,292.219l-4.656-19.641l-24.25,5.734c0-0.328,0.016-0.641,0.016-0.969
+		c0-38.078-10.531-72.781-28.969-102.359c15.438-53.938-13.438-124.547-13.438-124.547S387.813,73,357.719,100.297
+		C327.109,91.063,292.578,88.094,256,88.094c-36.766,0-71.484,2.563-102.203,11.781c-30.156-27.109-82.5-49.438-82.5-49.438
+		S42.406,121.063,57.859,175c-18.422,29.578-28.984,64.281-28.984,102.344c0,0.328,0.031,0.641,0.031,0.969l-24.25-5.734L0,292.219
+		l30.109,7.125c2.672,23.578,9.672,44.75,20.234,63.422L12.875,377.75l7.484,18.75l41.203-16.484
+		c39.797,53.141,111.969,81.547,194.438,81.547c82.453,0,154.641-28.406,194.438-81.547l41.203,16.484l7.484-18.75l-37.469-14.984
+		C472.219,344.094,479.219,322.922,481.875,299.344z"/>
+                        </g>
                         <set attributeName="visibility" to="visible"
                              begin="ageImage5.mouseenter" end="ageImage5.mouseleave"/>
                         <set attributeName="visibility" to="hidden"
                              begin="ageImage5.mouseleave" end="ageImage5.mouseenter"/>
                         <animateMotion begin="ageImage5.mouseenter" end="ageImage5.mouseleave" dur="6s"
-                                       repeatCount="indefinite"
-                                       rotate="auto">
+                                       repeatCount="indefinite">
                             <mpath xlink:href="#border5"/>
                         </animateMotion>
-                    </circle>
+
+                    </g>
                 </svg>
             </div>
 
@@ -497,7 +598,8 @@
                         65 households).</p>
                 </div>
                 <div class="ageContent">
-                    <p class="ageText text">Icon count represents actual group size relative to the total population (N = 2058)</p>
+                    <p class="ageText text">Icon count represents actual group size relative to the total population (N
+                        = 2058)</p>
                     <p class="ageText text">Colored icons = pet owners within that group</p>
                 </div>
             </div>
@@ -510,7 +612,10 @@
         <section class="reasonContainer">
             <img id="reasonTitle" src="./assets/reason-title.png">
             <div class="reasonContent">
-                <p class="text">Companionship was the main driver reported behind getting an animal. This reinforces the important and positive role companion animals can play in a household. Another key driver was familiarity with that animal type (e.g., person has had this type of animal before). Subsequent drivers differed by species:</p>
+                <p class="text">Companionship was the main driver reported behind getting an animal. This reinforces the
+                    important and positive role companion animals can play in a household. Another key driver was
+                    familiarity with that animal type (e.g., person has had this type of animal before). Subsequent
+                    drivers differed by species:</p>
 
                 <p class="text reasonText">Circle size represents base sample size.</p>
                 <p class="text reasonText">• Dogs: n = 639</p>
