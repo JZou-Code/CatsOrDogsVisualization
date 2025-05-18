@@ -470,6 +470,96 @@ const dogsBtn = document.querySelector('#dogsBtn');
 //     window.addEventListener('resize', () => chart.resize());
 // })();
 
+(function (){
+    const categories = [
+        'Companionship / love / affection',
+        "I've had this type of pet in the past",
+        'Relaxation',
+        'They needed a home / adopted us',
+        'Encourage exercise',
+        'Pest control (e.g., hunt mice)',
+        'Inherited from a friend / family member / neighbour',
+        'To breed / enter competitions / as a hobby',
+        'Fun for the children',
+        'Education / responsibility for children',
+        "It was someone else's decision",
+        'Security',
+        "It's a working animal",
+        'They were a gift',
+        'Other'
+    ];
+
+    const dataCat = [68, 56, 20, 37, 1, 11, 14, 0, 14, 6, 9, 0, 0, 4, 4];
+    const dataDog = [77, 39, 22, 22, 36, 0, 8, 1, 16, 9, 12, 20, 4, 2, 4];
+
+    function toPieData(values) {
+        return values.map((v, i) => ({
+            name: categories[i],
+            value: v
+        }));
+    }
+
+    const option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c}%'
+        },
+        color: [
+            '#b77a7a', '#b7927a', '#b7ab7a', '#abb77a', '#92b77a',
+            '#7ab792', '#7ab7ab', '#7ab7b7', '#7aabb7', '#7a92b7',
+            '#927ab7', '#b17ab7', '#b77ab1', '#b77a92', '#b77a7a'
+        ],
+        // legend: {
+        //     type: 'scroll',
+        //     orient: 'vertical',
+        //     left: 10,
+        //     top: 60,
+        //     data: categories,
+        //     itemWidth: 10,
+        //     itemHeight: 10,
+        //     textStyle: {fontSize: 10}
+        // },
+        series: [
+            {
+                name: 'Cats',
+                type: 'pie',
+                radius: ['10%', '30%'],
+                center: ['70%', '55%'],
+                label: {
+                    show: true,
+                    formatter: '{b}\n{d}%',
+                    fontSize: 12
+                },
+                labelLine: {
+                    length: 6,
+                    length2: 12
+                },
+                data: toPieData(dataCat)
+            },
+            {
+                name: 'Dogs',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                center: ['70%', '55%'],
+                label: {
+                    show: true,
+                    formatter: '{b}\n{d}%',
+                    fontSize: 12
+                },
+                labelLine: {
+                    length: 6,
+                    length2: 12
+                },
+                data: toPieData(dataDog)
+            }
+        ]
+    };
+
+    const chart = echarts.init(document.querySelector('#reasonChart'));
+    chart.setOption(option);
+    window.addEventListener('resize', () => chart.resize());
+})();
+
 (function () {
     const chart = echarts.init(document.querySelector('#barChart'));
 
