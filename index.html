@@ -139,7 +139,8 @@
                 <svg id="ageImage1" width="1080" height="175" viewBox="-10 -10 1100 190"
                      xmlns="http://www.w3.org/2000/svg">
                     <svg class="innerSvg" x="50" y="25" width="979" height="115" viewBox="0 0 979 115"
-                         xmlns="http://www.w3.org/2000/svg">
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g fill="none" fill-rule="evenodd">
                             <path d="M18.635 83H4.36C1.764 83 0 81.358 0 78.616c0-3.826.866-9.7 5.65-9.7.507 0 2.647 2.354 5.848 2.354 3.2 0 5.34-2.353 5.846-2.353 4.786 0 5.651 5.873 5.651 9.699 0 2.742-1.764 4.384-4.36 4.384zm-7.137-13c-3.463 0-6.272-2.911-6.272-6.5s2.81-6.5 6.272-6.5 6.271 2.911 6.271 6.5S14.96 70 11.498 70z"
                                   fill="#3C6E71" fill-rule="nonzero"/>
@@ -173,13 +174,24 @@
                         </g>
                     </svg>
 
-                    <rect id="border"
-                          x="0" y="0"
-                          width="1080" height="165"
-                          rx="30" ry="30"
-                          fill="none"
-                          stroke="#3C6E71"
-                          stroke-width="3"/>
+                    <path
+                            id="border1"
+                            d="
+                                M30,0
+                                H1050
+                                A30,30 0 0 1 1080,30
+                                V135
+                                A30,30 0 0 1 1050,165
+                                H30
+                                A30,30 0 0 1 0,135
+                                V30
+                                A30,30 0 0 1 30,0
+                                Z
+                              "
+                            fill="none"
+                            stroke="#3C6E71"
+                            stroke-width="3"
+                    />
 
                     <g fill="#3C6E71" id="dogIcon" transform="translate(-10,-13) scale(0.05)" visibility="hidden">
                         <g>
@@ -197,28 +209,18 @@
                              begin="ageImage1.mouseleave" end="ageImage1.mouseenter"/>
                         <animateMotion begin="ageImage1.mouseenter" end="ageImage1.mouseleave" dur="6s"
                                        repeatCount="indefinite">
-                            <mpath xlink:href="#border"/>
+                            <mpath xlink:href="#border1"/>
                         </animateMotion>
                     </g>
 
-<!--                    <circle r="8" fill="#3C6E71" visibility="hidden">-->
-<!--                        <set attributeName="visibility" to="visible"-->
-<!--                             begin="ageImage1.mouseenter" end="ageImage1.mouseleave"/>-->
-<!--                        <set attributeName="visibility" to="hidden"-->
-<!--                             begin="ageImage1.mouseleave" end="ageImage1.mouseenter"/>-->
-<!--                        <animateMotion begin="ageImage1.mouseenter" end="ageImage1.mouseleave" dur="6s"-->
-<!--                                       repeatCount="indefinite"-->
-<!--                                       rotate="auto">-->
-<!--                            <mpath xlink:href="#border"/>-->
-<!--                        </animateMotion>-->
-<!--                    </circle>-->
                 </svg>
             </div>
             <div class="svgContainer">
                 <svg id="ageImage2" width="1080" height="175" viewBox="-10 -10 1100 190"
                      xmlns="http://www.w3.org/2000/svg">
                     <svg class="innerSvg" x="50" y="25" width="979" height="115" viewBox="0 0 979 115"
-                         xmlns="http://www.w3.org/2000/svg">
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g fill="none" fill-rule="evenodd">
                             <path d="M719.638 91h-14.277c-2.597 0-4.361-1.579-4.361-4.215 0-3.679.866-9.327 5.652-9.327.506 0 2.646 2.263 5.848 2.263s5.342-2.263 5.848-2.263c4.786 0 5.652 5.648 5.652 9.327 0 2.636-1.764 4.215-4.362 4.215zM712.5 78.5c-3.463 0-6.273-2.8-6.273-6.25S709.037 66 712.5 66c3.463 0 6.273 2.8 6.273 6.25s-2.81 6.25-6.273 6.25z"
                                   fill="#D68C8C" fill-rule="nonzero"/>
@@ -257,13 +259,24 @@
                         </g>
                     </svg>
 
-                    <rect id="border"
-                          x="0" y="0"
-                          width="1080" height="165"
-                          rx="30" ry="30"
-                          fill="none"
-                          stroke="#D68C8C"
-                          stroke-width="3"/>
+                    <path
+                            id="border2"
+                            d="
+                                M30,0
+                                H1050
+                                A30,30 0 0 1 1080,30
+                                V135
+                                A30,30 0 0 1 1050,165
+                                H30
+                                A30,30 0 0 1 0,135
+                                V30
+                                A30,30 0 0 1 30,0
+                                Z
+                              "
+                            fill="none"
+                            stroke="#D68C8C"
+                            stroke-width="3"
+                    />
 
                     <g fill="#D68C8C" id="dogIcon" transform="translate(-10,-13) scale(0.05)" visibility="hidden">
                         <g>
@@ -281,27 +294,17 @@
                              begin="ageImage2.mouseleave" end="ageImage2.mouseenter"/>
                         <animateMotion begin="ageImage2.mouseenter" end="ageImage2.mouseleave" dur="6s"
                                        repeatCount="indefinite">
-                            <mpath xlink:href="#border"/>
+                            <mpath xlink:href="#border2"/>
                         </animateMotion>
 
                     </g>
 
-<!--                    <circle r="8" fill="#D68C8C" visibility="hidden">-->
-<!--                        <set attributeName="visibility" to="visible"-->
-<!--                             begin="ageImage2.mouseenter" end="ageImage2.mouseleave"/>-->
-<!--                        <set attributeName="visibility" to="hidden"-->
-<!--                             begin="ageImage2.mouseleave" end="ageImage2.mouseenter"/>-->
-<!--                        <animateMotion begin="ageImage2.mouseenter" end="ageImage2.mouseleave" dur="6s"-->
-<!--                                       repeatCount="indefinite"-->
-<!--                                       rotate="auto">-->
-<!--                            <mpath xlink:href="#border"/>-->
-<!--                        </animateMotion>-->
-<!--                    </circle>-->
                 </svg>
             </div>
             <div class="svgContainer">
                 <svg id="ageImage3" width="1080" height="175" viewBox="-10 -10 1100 190"
-                     xmlns="http://www.w3.org/2000/svg">
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <svg class="innerSvg" x="50" y="25" width="979" height="115" viewBox="0 0 979 115"
                          xmlns="http://www.w3.org/2000/svg">
                         <g fill="none" fill-rule="evenodd">
@@ -354,13 +357,24 @@
                         </g>
                     </svg>
 
-                    <rect id="border"
-                          x="0" y="0"
-                          width="1080" height="165"
-                          rx="30" ry="30"
-                          fill="none"
-                          stroke="#E8D3A9"
-                          stroke-width="3"/>
+                    <path
+                            id="border3"
+                            d="
+                                M30,0
+                                H1050
+                                A30,30 0 0 1 1080,30
+                                V135
+                                A30,30 0 0 1 1050,165
+                                H30
+                                A30,30 0 0 1 0,135
+                                V30
+                                A30,30 0 0 1 30,0
+                                Z
+                              "
+                            fill="none"
+                            stroke="#E8D3A9"
+                            stroke-width="3"
+                    />
 
                     <g fill="#E8D3A9" id="dogIcon" transform="translate(-10,-13) scale(0.05)" visibility="hidden">
                         <g>
@@ -378,27 +392,17 @@
                              begin="ageImage3.mouseleave" end="ageImage3.mouseenter"/>
                         <animateMotion begin="ageImage3.mouseenter" end="ageImage3.mouseleave" dur="6s"
                                        repeatCount="indefinite">
-                            <mpath xlink:href="#border"/>
+                            <mpath xlink:href="#border3"/>
                         </animateMotion>
 
                     </g>
 
-                    <circle r="8" fill="#E8D3A9" visibility="hidden">
-                        <set attributeName="visibility" to="visible"
-                             begin="ageImage3.mouseenter" end="ageImage3.mouseleave"/>
-                        <set attributeName="visibility" to="hidden"
-                             begin="ageImage3.mouseleave" end="ageImage3.mouseenter"/>
-                        <animateMotion begin="ageImage3.mouseenter" end="ageImage3.mouseleave" dur="6s"
-                                       repeatCount="indefinite"
-                                       rotate="auto">
-                            <mpath xlink:href="#border"/>
-                        </animateMotion>
-                    </circle>
                 </svg>
             </div>
             <div class="svgContainer">
                 <svg id="ageImage4" width="1080" height="175" viewBox="-10 -10 1100 190"
-                     xmlns="http://www.w3.org/2000/svg">
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <svg class="innerSvg" x="50" y="25" width="979" height="115" viewBox="0 0 979 115"
                          xmlns="http://www.w3.org/2000/svg">
                         <g fill="none" fill-rule="evenodd">
@@ -455,13 +459,24 @@
                         </g>
                     </svg>
 
-                    <rect id="border"
-                          x="0" y="0"
-                          width="1080" height="165"
-                          rx="30" ry="30"
-                          fill="none"
-                          stroke="#A39BB5"
-                          stroke-width="3"/>
+                    <path
+                            id="border4"
+                            d="
+                                M30,0
+                                H1050
+                                A30,30 0 0 1 1080,30
+                                V135
+                                A30,30 0 0 1 1050,165
+                                H30
+                                A30,30 0 0 1 0,135
+                                V30
+                                A30,30 0 0 1 30,0
+                                Z
+                            "
+                            fill="none"
+                            stroke="#A39BB5"
+                            stroke-width="3"
+                    />
 
                     <g fill="#A39BB5" id="dogIcon" transform="translate(-10,-13) scale(0.05)" visibility="hidden">
                         <g>
@@ -479,27 +494,17 @@
                              begin="ageImage4.mouseleave" end="ageImage4.mouseenter"/>
                         <animateMotion begin="ageImage4.mouseenter" end="ageImage4.mouseleave" dur="6s"
                                        repeatCount="indefinite">
-                            <mpath xlink:href="#border"/>
+                            <mpath xlink:href="#border4"/>
                         </animateMotion>
 
                     </g>
 
-<!--                    <circle r="8" fill="#A39BB5" visibility="hidden">-->
-<!--                        <set attributeName="visibility" to="visible"-->
-<!--                             begin="ageImage4.mouseenter" end="ageImage4.mouseleave"/>-->
-<!--                        <set attributeName="visibility" to="hidden"-->
-<!--                             begin="ageImage4.mouseleave" end="ageImage4.mouseenter"/>-->
-<!--                        <animateMotion begin="ageImage4.mouseenter" end="ageImage4.mouseleave" dur="6s"-->
-<!--                                       repeatCount="indefinite"-->
-<!--                                       rotate="auto">-->
-<!--                            <mpath xlink:href="#border"/>-->
-<!--                        </animateMotion>-->
-<!--                    </circle>-->
                 </svg>
             </div>
             <div class="svgContainer">
-                <svg id="ageImage5" width="1080" height="185" viewBox="-10 -10 1106 200"
-                     xmlns="http://www.w3.org/2000/svg">
+                <svg id="ageImage5" width="1080" height="185" viewBox="-16 -10 1106 200"
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <svg x="50" y="25" width="979" height="129" viewBox="0 0 979 129"
                          xmlns="http://www.w3.org/2000/svg">
                         <g fill="none" fill-rule="evenodd">
@@ -544,24 +549,25 @@
                         </g>
                     </svg>
 
-                    <rect id="border5"
-                          x="0" y="0"
-                          width="1080" height="180"
-                          rx="30" ry="30"
-                          fill="none"
-                          stroke="#AFD1B6"
-                          stroke-width="3"/>
-<!--                    <circle r="8" fill="#AFD1B6" visibility="hidden">-->
-<!--                        <set attributeName="visibility" to="visible"-->
-<!--                             begin="ageImage5.mouseenter" end="ageImage5.mouseleave"/>-->
-<!--                        <set attributeName="visibility" to="hidden"-->
-<!--                             begin="ageImage5.mouseleave" end="ageImage5.mouseenter"/>-->
-<!--                        <animateMotion begin="ageImage5.mouseenter" end="ageImage5.mouseleave" dur="6s"-->
-<!--                                       repeatCount="indefinite"-->
-<!--                                       rotate="auto">-->
-<!--                            <mpath xlink:href="#border5"/>-->
-<!--                        </animateMotion>-->
-<!--                    </circle>-->
+                    <path
+                            id="border5"
+                            d="
+                                M30,0
+                                H1050
+                                A30,30 0 0 1 1080,30
+                                V150
+                                A30,30 0 0 1 1050,180
+                                H30
+                                A30,30 0 0 1 0,150
+                                V30
+                                A30,30 0 0 1 30,0
+                                Z
+                            "
+                            fill="none"
+                            stroke="#AFD1B6"
+                            stroke-width="3"
+                    />
+
                     <g fill="#AFD1B6" id="dogIcon" transform="translate(-10,-13) scale(0.05)" visibility="hidden">
                         <g>
                             <path class="st0" d="M481.875,299.344L512,292.219l-4.656-19.641l-24.25,5.734c0-0.328,0.016-0.641,0.016-0.969
