@@ -105,7 +105,8 @@ button:active {
 }
 
 .active {
-    background-color: lightgreen;
+    background-color: #19a784;
+    color: white;
 }
 
 #regionMap {
