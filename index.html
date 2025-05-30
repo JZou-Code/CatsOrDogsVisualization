@@ -615,7 +615,15 @@
                 <p class="text reasonText">• Dogs: n = 639</p>
                 <p class="text reasonText">• Cats: n = 858</p>
             </div>
-            <div id="reasonChart"></div>
+<!--            <div id="reasonChart"></div>-->
+            <div id="reasonChartContainer">
+                <img class="chartImage fade hidden" id="catChart" src="assets/Reasons%20for%20acquiring-svg/Reasons%20for%20acquiring-svg/cats.svg">
+                <img class="chartImage fade hidden" id="dogChart" src="assets/Reasons%20for%20acquiring-svg/Reasons%20for%20acquiring-svg/dogs.svg">
+                <img class="chartImage fade" id="fullChart" src="assets/Reasons%20for%20acquiring-svg/Reasons%20for%20acquiring-svg/full.svg">
+                <img class="functionalIcon icon" id="iconCats" src="assets/reason/cats.png">
+                <img class="icon" id="iconVs" src="assets/reason/vs.png">
+                <img class="functionalIcon icon" id="iconDogs" src="assets/reason/dogs.png">
+            </div>
         </section>
 
         <section class="barContainer">
@@ -667,6 +675,8 @@
 
 <script src="js/echarts.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
 <script src="js/geo.js"></script>
 <script src="js/charts.js"></script>
 

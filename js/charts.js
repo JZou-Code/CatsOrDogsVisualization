@@ -470,135 +470,196 @@ const dogsBtn = document.querySelector('#dogsBtn');
 //     window.addEventListener('resize', () => chart.resize());
 // })();
 
-(function (){
-    const categories = [
-        'Companionship / love / affection',
-        "I've had this type of pet in the past",
-        'Relaxation',
-        'They needed a home / adopted us',
-        'Encourage exercise',
-        'Pest control (e.g., hunt mice)',
-        'Inherited from a friend / family member / neighbour',
-        'To breed / enter competitions / as a hobby',
-        'Fun for the children',
-        'Education / responsibility for children',
-        "It was someone else's decision",
-        'Security',
-        "It's a working animal",
-        'They were a gift',
-        'Other'
-    ];
+// (function (){
+//     const categories = [
+//         'Companionship / love / affection',
+//         "I've had this type of pet in the past",
+//         'Relaxation',
+//         'They needed a home / adopted us',
+//         'Encourage exercise',
+//         'Pest control (e.g., hunt mice)',
+//         'Inherited from a friend / family member / neighbour',
+//         'To breed / enter competitions / as a hobby',
+//         'Fun for the children',
+//         'Education / responsibility for children',
+//         "It was someone else's decision",
+//         'Security',
+//         "It's a working animal",
+//         'They were a gift',
+//         'Other'
+//     ];
+//
+//     const dataCat = [68, 56, 20, 37, 1, 11, 14, 0, 14, 6, 9, 0, 0, 4, 4];
+//     const dataDog = [77, 39, 22, 22, 36, 0, 8, 1, 16, 9, 12, 20, 4, 2, 4];
+//
+//     function toPieData(values) {
+//         return values.map((v, i) => ({
+//             name: categories[i],
+//             value: v
+//         }));
+//     }
+//
+//     const option = {
+//         tooltip: {
+//             trigger: 'item',
+//             formatter: '{a} <br/>{b}: {c}%'
+//         },
+//         color: [
+//             '#b77a7a', '#b7927a', '#b7ab7a', '#abb77a', '#92b77a',
+//             '#7ab792', '#7ab7ab', '#7ab7b7', '#7aabb7', '#7a92b7',
+//             '#927ab7', '#b17ab7', '#b77ab1', '#b77a92', '#b77a7a'
+//         ],
+//         legend: {
+//             type: 'scroll',
+//             orient: 'vertical',
+//             left: 10,
+//             top: 60,
+//             data: categories,
+//             itemWidth: 10,
+//             itemHeight: 10,
+//             textStyle: {fontSize: 10}
+//         },
+//         series: [
+//             {
+//                 name: 'Cats',
+//                 type: 'pie',
+//                 radius: ['10%', '30%'],
+//                 center: ['70%', '55%'],
+//                 label: {
+//                     show: false,
+//                     formatter: '{b}\n{d}%',
+//                     fontSize: 12
+//                 },
+//                 labelLine: {
+//                     length: 6,
+//                     length2: 12
+//                 },
+//                 data: toPieData(dataCat)
+//             },
+//             {
+//                 name: 'Dogs',
+//                 type: 'pie',
+//                 radius: ['50%', '70%'],
+//                 center: ['70%', '55%'],
+//                 label: {
+//                     show: false,
+//                     formatter: '{b}\n{d}%',
+//                     fontSize: 12
+//                 },
+//                 labelLine: {
+//                     length: 6,
+//                     length2: 12
+//                 },
+//                 data: toPieData(dataDog)
+//             }
+//         ]
+//     };
+//
+//     const chart = echarts.init(document.querySelector('#reasonChart'));
+//     chart.setOption(option);
+//     window.addEventListener('resize', () => chart.resize());
+// })();
 
-    const dataCat = [68, 56, 20, 37, 1, 11, 14, 0, 14, 6, 9, 0, 0, 4, 4];
-    const dataDog = [77, 39, 22, 22, 36, 0, 8, 1, 16, 9, 12, 20, 4, 2, 4];
+// Reason part
+// const $cat = $('#catChart');
+// const $dog = $('#dogChart');
+// const $full = $('#fullChart');
+//
+// const $iconCats = $('#iconCats');
+// const $iconDogs = $('#iconDogs');
+//
+// const $icons = $('#reasonChartContainer .icon');
+//
+// $icons.on('mouseout', ()=>{
+//     $cat.fadeTo(1000,0);
+//     $dog.fadeTo(1000,0);
+//     $full.fadeTo(1000,1)
+// })
+//
+// $iconCats[0].addEventListener('mouseenter', () => {
+//     $cat.fadeTo(1000, 1);
+//     $full.fadeTo(1000, 0);
+// })
+//
+// $iconDogs.on('mouseenter', () => {
+//     $dog.fadeTo(1000, 0);
+//     $full.fadeTo(1000, 0);
+// })
 
-    function toPieData(values) {
-        return values.map((v, i) => ({
-            name: categories[i],
-            value: v
-        }));
-    }
+const cat = document.querySelector('#catChart');
+const dog = document.querySelector('#dogChart');
+const full = document.querySelector('#fullChart');
 
-    const option = {
-        tooltip: {
-            trigger: 'item',
-            formatter: '{a} <br/>{b}: {c}%'
-        },
-        color: [
-            '#b77a7a', '#b7927a', '#b7ab7a', '#abb77a', '#92b77a',
-            '#7ab792', '#7ab7ab', '#7ab7b7', '#7aabb7', '#7a92b7',
-            '#927ab7', '#b17ab7', '#b77ab1', '#b77a92', '#b77a7a'
-        ],
-        legend: {
-            type: 'scroll',
-            orient: 'vertical',
-            left: 10,
-            top: 60,
-            data: categories,
-            itemWidth: 10,
-            itemHeight: 10,
-            textStyle: {fontSize: 10}
-        },
-        series: [
-            {
-                name: 'Cats',
-                type: 'pie',
-                radius: ['10%', '30%'],
-                center: ['70%', '55%'],
-                label: {
-                    show: false,
-                    formatter: '{b}\n{d}%',
-                    fontSize: 12
-                },
-                labelLine: {
-                    length: 6,
-                    length2: 12
-                },
-                data: toPieData(dataCat)
-            },
-            {
-                name: 'Dogs',
-                type: 'pie',
-                radius: ['50%', '70%'],
-                center: ['70%', '55%'],
-                label: {
-                    show: false,
-                    formatter: '{b}\n{d}%',
-                    fontSize: 12
-                },
-                labelLine: {
-                    length: 6,
-                    length2: 12
-                },
-                data: toPieData(dataDog)
-            }
-        ]
-    };
+const icons = document.querySelectorAll('#reasonChartContainer .icon');
 
-    const chart = echarts.init(document.querySelector('#reasonChart'));
-    chart.setOption(option);
-    window.addEventListener('resize', () => chart.resize());
-})();
+const iconCats = document.querySelector('#iconCats');
+const iconDogs = document.querySelector('#iconDogs');
+
+for (const icon of icons) {
+    icon.addEventListener('mouseout', () => {
+        cat.classList.add('hidden');
+        dog.classList.add('hidden');
+        full.classList.remove('hidden');
+    })
+}
+
+iconCats.addEventListener('mouseenter', () => {
+    cat.classList.remove('hidden');
+    dog.classList.add('hidden');
+    full.classList.add('hidden');
+})
+
+iconDogs.addEventListener('mouseenter', () => {
+    cat.classList.add('hidden');
+    dog.classList.remove('hidden');
+    full.classList.add('hidden');
+})
+
 
 (function () {
     const chart = echarts.init(document.querySelector('#barChart'));
 
-    const rawData=[
-        {name: 'Time commitment', word:'Time', value: 49, itemStyle: {color: '#debe89'}},
-        {name: 'Having a pet is expensive', word:'Cost', value: 48, itemStyle: {color: '#845b74'}},
-        {name: 'Too much responsibility', word:'Responsibility', value: 35, itemStyle: {color: '#ae6357'}},
+    const rawData = [
+        {name: 'Time commitment', word: 'Time', value: 49, itemStyle: {color: '#debe89'}},
+        {name: 'Having a pet is expensive', word: 'Cost', value: 48, itemStyle: {color: '#845b74'}},
+        {name: 'Too much responsibility', word: 'Responsibility', value: 35, itemStyle: {color: '#ae6357'}},
         {
             name: 'They are messy(e.g. shedding of fur,tracking dirt into house)',
-            word:'Messy',
+            word: 'Messy',
             value: 29,
             itemStyle: {color: '#726e4b'}
         },
-        {name: 'Sadness when the pet passes away', word:'Loss', value: 20, itemStyle: {color: '#516982'}},
-        {name: 'Animal Safety', word:'Safety', value: 14, itemStyle: {color: '#8b775c'}},
+        {name: 'Sadness when the pet passes away', word: 'Loss', value: 20, itemStyle: {color: '#516982'}},
+        {name: 'Animal Safety', word: 'Safety', value: 14, itemStyle: {color: '#8b775c'}},
         {
             name: 'I’m worried about potential impact on native species',
-            word:'Species Impact',
+            word: 'Species Impact',
             value: 17,
             itemStyle: {color: '#9f6076'}
         },
-        {name: 'Odour', word:'Odour', value: 16, itemStyle: {color: '#9b9b5e'}},
-        {name: 'Away from home often/like to travel', word:'Travel', value: 11, itemStyle: {color: '#457277'}},
-        {name: 'I do not like pets', word:'Dislike', value: 10, itemStyle: {color: '#615277'}},
-        {name: 'Other', word:'Other', value: 13, itemStyle: {color: '#548267'}},
-        {name: 'They are noisy(e.g. barking, meowing)', word:'Noise', value: 11, itemStyle: {color: '#67845b'}},
+        {name: 'Odour', word: 'Odour', value: 16, itemStyle: {color: '#9b9b5e'}},
+        {name: 'Away from home often/like to travel', word: 'Travel', value: 11, itemStyle: {color: '#457277'}},
+        {name: 'I do not like pets', word: 'Dislike', value: 10, itemStyle: {color: '#615277'}},
+        {name: 'Other', word: 'Other', value: 13, itemStyle: {color: '#548267'}},
+        {name: 'They are noisy(e.g. barking, meowing)', word: 'Noise', value: 11, itemStyle: {color: '#67845b'}},
         {
             name: 'Personal safety issues(e.g. bites, scratches, disease)',
-            word:'Safety Issues',
+            word: 'Safety Issues',
             value: 6,
             itemStyle: {color: '#7b7b7b'}
         },
         {
             name: 'Not suitable/allowed where I live(e.g. apartment, retirement home)',
-            word:'Restrictions',
+            word: 'Restrictions',
             value: 6,
             itemStyle: {color: '#907353'}
         },
-        {name: 'I\'m worried about impact on global environment', word:'Env.Impact', value: 5, itemStyle: {color: '#79749d'}}
+        {
+            name: 'I\'m worried about impact on global environment',
+            word: 'Env.Impact',
+            value: 5,
+            itemStyle: {color: '#79749d'}
+        }
     ];
 
 
@@ -654,7 +715,9 @@ const dogsBtn = document.querySelector('#dogsBtn');
                 label: {
                     show: true,
                     // formatter: '{b}',
-                    formatter: (params)=>{return params.data.word},
+                    formatter: (params) => {
+                        return params.data.word
+                    },
                     color: '#fff',
                     ellipsis: '...',
                     overflow: 'truncate',
