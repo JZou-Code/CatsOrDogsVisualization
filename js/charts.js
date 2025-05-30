@@ -261,8 +261,14 @@ const dogsBtn = document.querySelector('#dogsBtn');
     const plotH = h - topGap - bottomGap;
     const step = plotH / categories.length;
     const iconSize = 30;
+    const hoverSize = 35;
+
+    const NORMAL_FS = 14;
+    const HOVER_FS = 20;
 
     const option = {
+        animationDurationUpdate: 1000,
+        animationEasingUpdate: 'cubicOut',
         legend: {},
         tooltip: {
             trigger: 'item',
@@ -294,13 +300,31 @@ const dogsBtn = document.querySelector('#dogsBtn');
                 name: 'Cats', type: 'bar', barWidth: 16,
                 data: catsData, xAxisIndex: 0, yAxisIndex: 0,
                 itemStyle: {color: '#F5A9B8'},
-                label: {show: true, position: 'left', formatter: p => Math.abs(p.value) + '%'}
+                label: {show: true, position: 'left', formatter: p => Math.abs(p.value) + '%'},
+                emphasis: {
+                    // 鼠标 hover 到某根柱子时生效
+                    itemStyle: {
+                        // 你可以在这里“放大”的视觉效果：
+                        // 1) 改颜色、更鲜艳：
+                        color: '#F5A9B8',
+                        // 2) 加边框，看起来更粗：
+                        borderColor: '#F5A9B8',
+                        borderWidth: 5
+                    }
+                }
             },
             {
                 name: 'Dogs', type: 'bar', barWidth: 16,
                 data: dogsData, xAxisIndex: 2, yAxisIndex: 2,
                 itemStyle: {color: '#a7d2fa'},
-                label: {show: true, position: 'right', formatter: '{c}%'}
+                label: {show: true, position: 'right', formatter: '{c}%'},
+                emphasis: {
+                    itemStyle: {
+                        color: '#a7d2fa',
+                        borderColor: '#a7d2fa',
+                        borderWidth: 5
+                    }
+                }
             }
         ],
         graphic: (
@@ -308,9 +332,10 @@ const dogsBtn = document.querySelector('#dogsBtn');
                 const y = topGap + idx * step;
                 return [
                     {
+                        id: `cat-icon-${idx}`,
                         type: 'image',
                         left: '32%',
-                        top: `${y - iconSize / 2 + 20}px`,
+                        top: `${y - iconSize / 2 + 13}px`,
                         style: {
                             image: catIcons[idx],
                             width: iconSize,
@@ -318,21 +343,23 @@ const dogsBtn = document.querySelector('#dogsBtn');
                         }
                     },
                     {
+                        id: `text-${idx}`,
                         type: 'text',
                         left: 'center',
-                        top: `${y - iconSize / 2 + 28}px`,
+                        top: `${y - iconSize / 2 + 20}px`,
                         style: {
                             text: cat,
                             textAlign: 'center',
                             textVerticalAlign: 'middle',
-                            fontSize: 14,
+                            fontSize: NORMAL_FS,
                             fill: '#333'
                         }
                     },
                     {
+                        id: `dog-icon-${idx}`,
                         type: 'image',
                         right: '32%',
-                        top: `${y - iconSize / 2 + 20}px`,
+                        top: `${y - iconSize / 2 + 13}px`,
                         style: {
                             image: dogIcons[idx],
                             width: iconSize,
@@ -344,7 +371,64 @@ const dogsBtn = document.querySelector('#dogsBtn');
         )
     };
 
+
+    chart.on('mouseover', params => {
+        if (params.componentType === 'series') {
+            const idx = params.dataIndex;
+            const id = params.seriesName === 'Cats'
+                ? `cat-icon-${idx}`
+                : `dog-icon-${idx}`;
+            const textId = `text-${idx}`
+            // 放大、加阴影或提亮
+            chart.setOption({
+                graphic: [{
+                    id,
+                    style: {
+                        width: hoverSize,
+                    }
+                }, {
+                    id: textId,
+                    style: {
+                        // fontSize: HOVER_FS,
+                    },
+                    scale: [1.2, 1.2]
+                }]
+            });
+        }
+    });
+
+    chart.on('mouseout', params => {
+        if (params.componentType === 'series') {
+            const idx = params.dataIndex;
+            const id = params.seriesName === 'Cats'
+                ? `cat-icon-${idx}`
+                : `dog-icon-${idx}`;
+            const textId = `text-${idx}`
+
+            // 复原
+            chart.setOption({
+                graphic: [{
+                    id,
+                    style: {
+                        width: iconSize,
+                    }
+                },
+                    {
+                        id: textId,
+                        style: {
+                            // fontSize: NORMAL_FS,
+                        },
+                        scale: [1, 1]
+                    }]
+            });
+        }
+    });
+
+    // option.animationDurationUpdate = 1000;      // 过渡
+    // option.animationEasingUpdate = 'cubicOut';
+
     chart.setOption(option);
+
     window.addEventListener('resize', () => chart.resize());
 })();
 
