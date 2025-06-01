@@ -5,13 +5,16 @@
 }
 
 .headerContainer {
-    max-width: 100%;
+    width: 100vw;
+    height: 379px;
     position: relative;
+    background-image: url("/assets/header.jpg");
+    background-repeat: repeat-x;
 }
 
-#header {
-    width: 100%;
-}
+/*#header {*/
+/*    width: 100%;*/
+/*}*/
 
 #title {
     position: absolute;
@@ -20,7 +23,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: 46.25%;
+    width: 661px;
     object-fit: contain;
 }
 
@@ -374,10 +377,14 @@ button:active {
     font-weight: normal;
 }
 
-.pageBottomContainer {
-    margin-top: 10rem;
-    width: 100%;
+.pageBottom{
     background-color: #7ad2af;
+}
+
+.pageBottomContainer {
+    max-width: 1440px;
+    margin: 10rem auto 0;
+    width: 100%;
 }
 
 .bottomContent {
