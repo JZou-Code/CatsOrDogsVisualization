@@ -250,8 +250,8 @@ const dogsBtn = document.querySelector('#dogsBtn');
     ];
 
     // 数据
-    const catsData = [22, 15, 16, 11, 8, 8, 8, 5, 4, 2, 1, 1].map(v => -v);
-    const dogsData = [6, 10, 1, 8, 21, 34, 4, 2, 1, 2, 1, 1];
+    const catsData = ['', 1, 2, 4, 5,  8,  8, 8, 11, 16, 15, 22].map(v => -v);
+    const dogsData = [ 1, 2, 1, 2, 4, 34, 21, 8, 10,  1, 10,  6];
 
     // 布局参数
     const topGap = 60;
@@ -669,12 +669,6 @@ const dogsBtn = document.querySelector('#dogsBtn');
 //     $dog.fadeTo(1000, 0);
 //     $full.fadeTo(1000, 0);
 // })
-
-
-
-
-
-
 
 
 (function () {
