@@ -258,8 +258,8 @@ const dogsBtn = document.querySelector('#dogsBtn');
     const bottomGap = 60;
     const leftGap = '5%';
     const rightGap = '5%';
-    const plotH = h - topGap - bottomGap;
-    const step = plotH / categories.length;
+    const plotH = h - topGap - bottomGap + 50;
+    const step = plotH / categories.length * 1.02;
     const iconSize = 30;
     const hoverSize = 35;
 
@@ -281,9 +281,9 @@ const dogsBtn = document.querySelector('#dogsBtn');
             }
         },
         grid: [
-            {left: leftGap, right: '70%', top: topGap, bottom: bottomGap}, // Cats
-            {left: '30%', right: '30%', top: topGap, bottom: bottomGap}, // 中心分类
-            {left: '70%', right: rightGap, top: topGap, bottom: bottomGap} // Dogs
+            {height: plotH, left: leftGap, right: '70%', top: topGap, bottom: bottomGap}, // Cats
+            {height: plotH,left: '30%', right: '30%', top: topGap, bottom: bottomGap}, // 中心分类
+            {height: plotH,left: '70%', right: rightGap, top: topGap, bottom: bottomGap} // Dogs
         ],
         xAxis: [
             {type: 'value', gridIndex: 0, show: false, min: -30, max: 0},
