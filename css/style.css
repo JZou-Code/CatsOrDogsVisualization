@@ -423,6 +423,7 @@ button:active {
 }
 
 .bottomText {
+    font-size: 0.8rem;
     font-weight: normal;
 }
 
