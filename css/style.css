@@ -112,7 +112,6 @@ button:active {
 #regionMap {
     width: 100%;
     height: 500px;
-    transform: scale(1.2);
     transform-origin: center center;
     display: flex;
     justify-content: center;
