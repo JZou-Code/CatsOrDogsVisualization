@@ -92,7 +92,7 @@ const dogsBtn = document.querySelector('#dogsBtn');
             label: {show: true, formatter: '{c}%'},
             emphasis: {
                 // label: {show: true, position:'outside'},
-                itemStyle: {areaColor: 'orange'}
+                itemStyle: {areaColor: '#FFE28E'}
             },
             data: dataCats
         }]

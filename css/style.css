@@ -91,20 +91,21 @@
     border: solid 1px rgba(0, 0, 0, .3);
     font-family: Arial, serif;
     width: 13%;
-    height: 50%;
+    height: 70%;
     border-radius: 5px;
     box-shadow: 0 0 2px #dccae2;
     font-size: 0.8rem;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 button:hover {
-    box-shadow: 0 0 5px gray;
+    box-shadow: 0 0 5px rgb(197, 197, 197);
     transform: scale(1.05);
 }
 
 button:active {
+    transform: scale(0.96);
     box-shadow: none;
-    transform: scale(1);
 }
 
 .active {
@@ -176,7 +177,6 @@ button:active {
     align-items: center;
     justify-content: space-around;
 }
-
 
 .subImageCats {
     width: 7.5%;
@@ -281,9 +281,9 @@ button:active {
 
 .ageText {
     font-weight: normal;
-    font-size: 1.1rem;
+    font-size: 1rem;
     /*margin-bottom: 1.5rem;*/
-    line-height: 1.5rem;
+    line-height: 1.6rem;
 }
 
 .reasonContainer {
