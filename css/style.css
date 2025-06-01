@@ -272,16 +272,18 @@ button:active {
     margin: auto;
     width: 30%;
     background-color: white;
-    padding: 0 1.5rem 2rem;
+    padding: 0 1.5rem;
 }
 
 .ageContent {
-    margin-bottom: min(5rem, 8vw);
+    margin-bottom: min(6rem, 8vw);
 }
 
 .ageText {
     font-weight: normal;
-    font-size: min(1rem, 1.2vw);
+    font-size: 1.1rem;
+    /*margin-bottom: 1.5rem;*/
+    line-height: 1.5rem;
 }
 
 .reasonContainer {
