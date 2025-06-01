@@ -250,7 +250,7 @@ const dogsBtn = document.querySelector('#dogsBtn');
     ];
 
     // 数据
-    const catsData = ['', 1, 2, 4, 5,  8,  8, 8, 11, 16, 15, 22].map(v => -v);
+    const catsData = [ 0, 1, 2, 4, 5,  8,  8, 8, 11, 16, 15, 22].map(v => -v);
     const dogsData = [ 1, 2, 1, 2, 4, 34, 21, 8, 10,  1, 10,  6];
 
     // 布局参数
@@ -677,7 +677,7 @@ const dogsBtn = document.querySelector('#dogsBtn');
     const rawData = [
         {name: 'Time commitment', word: 'Time', value: 49, itemStyle: {color: '#debe89'}},
         {name: 'Having a pet is expensive', word: 'Cost', value: 48, itemStyle: {color: '#845b74'}},
-        {name: 'Too much responsibility', word: 'Responsibility', value: 35, itemStyle: {color: '#ae6357'}},
+        {name: 'Too much responsibility', word: 'Responsibility', value: 36, itemStyle: {color: '#ae6357'}},
         {
             name: 'They are messy(e.g. shedding of fur,tracking dirt into house)',
             word: 'Messy',
@@ -771,13 +771,14 @@ const dogsBtn = document.querySelector('#dogsBtn');
                     show: true,
                     // formatter: '{b}',
                     formatter: (params) => {
-                        return params.data.word
+                        return params.data.name
                     },
                     color: '#fff',
-                    ellipsis: '...',
-                    overflow: 'truncate',
+                    width:100,
+                    overflow: 'break',
                     lineOverflow: 'break',
-                    fontSize: 20
+                    ellipsis: '...',
+                    fontSize: 18
                 },
                 upperLabel: {
                     show: false
