@@ -277,12 +277,12 @@ button:active {
 }
 
 .ageContent {
-    margin-bottom: min(6rem, 8vw);
+    margin-bottom: min(5rem, 8vw);
 }
 
 .ageText {
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 0.8rem;
     /*margin-bottom: 1.5rem;*/
     line-height: 1.6rem;
 }
