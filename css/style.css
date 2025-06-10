@@ -8,7 +8,7 @@
     width: 100vw;
     height: 379px;
     position: relative;
-    background-image: url("/assets/header.jpg");
+    background-image: url("../assets/header.jpg");
     background-repeat: repeat-x;
 }
 
